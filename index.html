@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Assets/styles.css/style.css">
     <link rel="stylesheet" href="/Assets/styles.css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Assets/styles.css/style.css">    
     <title>WebSite</title>
 </head>
 <body>
-    
-    
+        <Header class="header" id="headerHome">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light headerNavbar">
+                <a class="navbar-brand" href="#">
+                    <img src="" class="logo" alt="logo?">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active" id="home">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item" id="historia">
+                            <a class="nav-link"  href="#">História</a>
+                        </li>
+                        <li class="nav-item" id="festival">
+                            <a class="nav-link" href="#">Festival</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="ml-auto d-flex align-items-center" id="headerButtons">
+                    <button class="btn btn-outline-primary mr-2 buttonStyle" >Login</button>
+                    <button class="btn btn-primary buttonStyle">Cadastro</button>
+                </div>
+            </nav>
+        </Header>
+
 
 
 
     <script src="/Assets/scripts/bootstrap.min.js"></script>
+    <script src="/Assets/scripts/script.js"></script>
 </body>
 </html>
