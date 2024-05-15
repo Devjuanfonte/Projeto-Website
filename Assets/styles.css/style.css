@@ -51,14 +51,15 @@
 @media (max-width: 460px) {
     .sectionTitle {
         font-family: 'Playfair Display', serif;
-        font-size: 24px;
+        font-size: 18px;
+        margin-top: 10px;
     }
     .buttonStyle{
         padding: 3px 6px;
         font-size: 12px
     }
     .sectionText {
-        font-size: 12px;
+        font-size: 9px;
     }   
 }
 @media (max-width: 300px) {
