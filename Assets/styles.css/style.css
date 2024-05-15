@@ -47,13 +47,8 @@
     }   
     
 }
-@media (max-width: 426px) {
-    .buttonStyle{
-        padding: 4px 8px;
-        font-size: 14px
-    }
-}
-@media (max-width: 370px) {
+             
+@media (max-width: 460px) {
     .sectionTitle {
         font-family: 'Playfair Display', serif;
         font-size: 24px;
