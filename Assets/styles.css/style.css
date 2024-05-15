@@ -53,17 +53,30 @@
         font-size: 14px
     }
 }
-@media (max-width: 350px) {
+@media (max-width: 355px) {
     .sectionTitle {
         font-family: 'Playfair Display', serif;
         font-size: 24px;
     }
     .buttonStyle{
-        padding: 4px 8px;
-        font-size: 14px
+        padding: 3px 6px;
+        font-size: 12px
     }
     .sectionText {
         font-size: 12px;
+    }   
+}
+@media (max-width: 300px) {
+    .sectionTitle {
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+    }
+    .buttonStyle{
+        padding: 2px 4px;
+        font-size: 8px
+    }
+    .sectionText {
+        font-size: 9px;
     }   
 }
 
