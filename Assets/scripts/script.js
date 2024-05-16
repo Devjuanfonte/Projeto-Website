@@ -6,16 +6,32 @@ let headerButtons = document.querySelectorAll('nav-link');
 
 const homePage = document.querySelector('.homePage');
 const loginPage = document.querySelector('.loginPage');
+const registerPage = document.querySelector('.registerPage');
 
 const homeNavButton = document.querySelector('#homeButton');
 
 function changeToLoginPage(){
     
     homePage.style.display = 'none';
+    registerPage.style.display = 'none';
     loginPage.style.display = 'grid';
 
     homeNavButton.addEventListener('click',()=>{
         loginPage.style.display = 'none';
+        registerPage.style.display = 'none';
+        homePage.style.display = 'grid';
+    })    
+}
+
+function changeToRegisterPage(){
+    
+    homePage.style.display = 'none';
+    loginPage.style.display = 'none';
+    registerPage.style.display = 'grid';
+
+    homeNavButton.addEventListener('click',()=>{
+        loginPage.style.display = 'none';
+        registerPage.style.display = 'none';
         homePage.style.display = 'grid';
     })    
 }

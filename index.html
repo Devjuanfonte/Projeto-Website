@@ -34,7 +34,7 @@
                     
                     <button id="login" class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()" >Login</button>
                     <button id="homeButton" class="btn btn-primary buttonStyle">Home</button>
-                    <button href="" id="register" class="btn btn-primary buttonStyle">Register</button>
+                    <button href="" id="register" class="btn btn-primary buttonStyle" onclick="changeToRegisterPage()">Register</button>
                     
                 </div>
             </nav>
@@ -112,15 +112,15 @@
                 <div class="opacity"></div>   
                 <div class="registerContent">
                     <div class="login registerContentBox">
-                        <h5>Faça login:</h5>
+                        <h5>Register</h5>
                         <hr class="underline">
                         <form>
                             <div class="form-group">
                                 <div class="labelContainer">
-                                    <label for="nome">Nome:
-                                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                                    <label for="nome">Full Name:
+                                        <input type="text" class="form-control" id="nome" placeholder="Enter your name" required>
                                     </label>
-                                    <label for="dataNascimento">Data de Nascimento:
+                                    <label for="dataNascimento">Date of Birth:
                                         <input type="date" class="form-control" id="dataNascimento" required>
                                     </label>
                                 </div>                               
@@ -129,43 +129,35 @@
                             <div class="form-group">
                                 <div class="labelContainer">
                                     <label for="email">E-mail:
-                                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
                                     </label>                                
-                                    <label for="telefone">Telefone:
-                                        <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                                    <label for="telefone">Phone:
+                                        <input type="tel" class="form-control" id="telefone" placeholder="Enter your phone" required>
                                     </label>
                                 </div>                               
                             </div>
 
                             <div class="form-group">
                                 <div class="labelContainer">
-                                    <label for="senha">Senha:
-                                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                                    <label for="senha">Password:
+                                        <input type="password" class="form-control" id="senha" placeholder="Enter your password" required>
                                     </label>
-                                    <label for="confirmarSenha">Confirmar Senha:
-                                        <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                                    <label for="confirmarSenha">Confirm Password:
+                                        <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirm your password" required>
                                     </label>
                                 </div>                               
                             </div>
                             <div class="form-group">
                                 <div class="labelContainer">
-                                    <label for="cidade">Cidade:
-                                        <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" required>
+                                    <label for="cidade">City:
+                                        <input type="text" class="form-control" id="cidade" placeholder="Enter your city" required>
                                     </label>
                                     <label for="danceStudio">Dance Studio:
-                                        <input type="text" class="form-control" id="danceStudio" placeholder="Digite o nome do seu studio de dança" required>
+                                        <input type="text" class="form-control" id="danceStudio" placeholder="Enter your name of studio de dance" required>
                                     </label>    
                                    </div>                               
-                            </div>
-                            
-                            
-                            <div class="form-group">
-                                
-                            </div>
-                            <div class="form-group">
-                                
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>                            
+                              <button type="submit" class="btn btn-primary buttonStyle registerButton">Sign up</button>
                         </form>
                     </div>
                     
