@@ -115,7 +115,7 @@
 
 /*Login Page*/
 
-.loginSection{
+.loginSection {
     width: 100%;
     display: flex;
     background-color: #fff;
@@ -190,10 +190,54 @@
 }
 
 
-
-
-
-
+.registerSection {
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    background-image: url('../imgs/Ballerina.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.registerSection .opacity{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    position: absolute;
+}
+.registerContent{
+    padding-top: 1vh;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    
+}
+.registerContentBox{
+    text-align: center;
+    background-color: #fff;
+    width: 70%;
+    min-width: 300px;    
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);
+    -moz-box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);
+    box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);    
+    overflow: hidden;
+    margin-top: 5vh;
+}
+.labelContainer{
+    overflow: hidden;
+}
+.form-group{
+    margin: 0px !important;
+}
+.labelContainer label{
+    margin-bottom: 2px !important;
+}
 
 
 @media (max-width: 1400px) {
@@ -235,6 +279,9 @@
     }
     #homeButton{
         display: block;
+    }
+    .labelContainer{
+       display: block;
     }
 }
 @media (max-width: 800px) {
@@ -331,8 +378,11 @@
 
 
 .homePage{
-    display: grid;
+    display: none;
 }
 .loginPage{
     display: none;
+}
+.registerPage{
+    display: grid;
 }
