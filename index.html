@@ -31,8 +31,11 @@
                     </ul>
                 </div>
                 <div class="ml-auto d-flex align-items-center" id="headerButtons">
-                    <button class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()" >Login</button>
-                    <button class="btn btn-primary buttonStyle">Cadastro</button>
+                    
+                    <button id="login" class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()" >Login</button>
+                    <button id="homeButton" class="btn btn-primary buttonStyle">Home</button>
+                    <button href="" id="register" class="btn btn-primary buttonStyle">Register</button>
+                    
                 </div>
             </nav>
         </Header>
@@ -104,13 +107,23 @@
                 </div>
             </section>
         </main>
+        <main class="mainContainer registerPage">
+            <section class="registerSection sectionContainer">
+                <div class="opacity"></div>   
+                <div class="registerContent">
+                    <div class="login registerContentBox">
+                        <h5>Faça login:</h5>
+                        <hr class="underline">
+                       ..
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
 
 
 
 
-        <footer class="footerContainer">
-            ....
-        </footer>
 
 
     <script src=".Assets/scripts/bootstrap.min.js"></script>
