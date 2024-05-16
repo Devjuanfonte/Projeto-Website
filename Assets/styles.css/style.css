@@ -182,12 +182,20 @@
 
 /*Login Page*/
 .loginPage{
-   
+  
 }
 .loginSection{
     width: 100%;
     display: flex;
     background-color: #fff;
+    background-image: url('../imgs/Ballerina.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.loginSection .opacity{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    position: absolute;
 }
 .loginContent{
     padding-top: 10vh;
@@ -195,6 +203,7 @@
     height: calc(100vh - 100px);
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 .loginContentBox{
     text-align: center;
