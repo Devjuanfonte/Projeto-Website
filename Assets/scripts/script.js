@@ -7,8 +7,8 @@ let headerButtons = document.querySelectorAll('nav-link');
 const homePage = document.querySelector('.homePage');
 const loginPage = document.querySelector('.loginPage');
 const registerPage = document.querySelector('.registerPage');
-
 const homeNavButton = document.querySelector('#homeButton');
+const body = document.querySelector('body');
 
 function changeToLoginPage(){
     
@@ -60,3 +60,12 @@ festivalButton.addEventListener('click', ()=>{
     historiaButton.classList.remove('active')
     festivalButton.classList.add('active')
 })
+
+
+/*window.addEventListener('scroll',()=>{
+    let height = window.scrollY;
+    if (height >=500){
+       document.querySelector('header').style.display ='none';
+    }
+})*/
+
