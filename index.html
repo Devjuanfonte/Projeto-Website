@@ -8,196 +8,230 @@
     <title>WebSite</title>
 </head>
 <body>
-        <Header class="header" id="headerHome">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light headerNavbar">
-                <a class="navbar-brand" href="#">
-                    <img src="" class="logo" alt="logo?">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active" id="home">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item" id="historia">
-                            <a class="nav-link"  href="#">História</a>
-                        </li>
-                        <li class="nav-item" id="festival">
-                            <a class="nav-link" href="#">Festival</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="ml-auto d-flex align-items-center" id="headerButtons">
-                    
-                    <button id="login" class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()" >Login</button>
-                    <button id="homeButton" class="btn btn-primary buttonStyle">Home</button>
-                    <button href="" id="register" class="btn btn-primary buttonStyle" onclick="changeToRegisterPage()">Register</button>
-                    
-                </div>
-            </nav>
-        </Header>
+    <!-- Cabeçalho com barra de navegação -->
+    <header class="header" id="headerHome">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light headerNavbar">
+            <!-- Logotipo -->
+            <a class="navbar-brand" href="#">
+                <img src="" class="logo" alt="logo?">
+            </a>
+            <!-- Botão para colapsar o menu em dispositivos móveis -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links do menu de navegação -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active" id="home">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item" id="historia">
+                        <a class="nav-link" href="#">História</a>
+                    </li>
+                    <li class="nav-item" id="festival">
+                        <a class="nav-link" href="#">Festival</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Botões de login e registro -->
+            <div class="ml-auto d-flex align-items-center" id="headerButtons">
+                <button id="login" class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()">Login</button>
+                <button id="homeButton" class="btn btn-primary buttonStyle">Home</button>
+                <button id="register" class="btn btn-primary buttonStyle" onclick="changeToRegisterPage()">Register</button>
+            </div>
+        </nav>
+    </header>
 
-        <main class="mainContainer homePage">
-            <section class="homeSection sectionContainer">
-                <div class="opacity"></div>   
-                <div class="homeSectionContent">
-                    <div class="title">
-                        <h2 class="display-3 text-center mb-4 sectionTitle">Projeto Cultural: Thalhe Festival</h2>
-                        <hr class="underline">
-                    </div>
-                    <div class="fullText">
-                        <p class="text-lg-left sectionText">Bem-vindos ao Thalhe, um festival de dança exclusivamente dedicado aos adultos, uma celebração vibrante e envolvente da expressão artística através do movimento. Este evento foi concebido com a visão de proporcionar uma plataforma inclusiva e inspiradora para os entusiastas da dança, onde a diversidade de estilos e a paixão pelo movimento convergem em um espetáculo único. Nossa intenção é criar um ambiente que não apenas promova o aprimoramento das habilidades de dança dos participantes, mas que também cultive uma comunidade coesa, onde a troca de experiências e a celebração da arte da dança sejam os pilares fundamentais. Estamos comprometidos em criar uma experiência que não apenas desafie e inspire, mas que também nutra o crescimento individual e coletivo de todos os envolvidos. Preparem-se para uma jornada emocionante, onde a dança transcende suas fronteiras, e a expressão artística encontra um lar vibrante e acolhedor.</p>
-                        <button class="signUp">Sign up</button>
-                    </div>                    
+    <!-- Conteúdo principal da página inicial -->
+    <main class="mainContainer homePage">
+        <section class="homeSection sectionContainer">
+            <div class="opacity"></div>
+            <div class="homeSectionContent">
+                <!-- Título e descrição do projeto -->
+                <div class="title">
+                    <h2 class="display-3 text-center mb-4 sectionTitle">Projeto Cultural: Thalhe Festival</h2>
+                    <hr class="underline">
                 </div>
-            </section>  
-
-
-            <section class="sectionMissao sectionContainer">
-                <div class="containerMissao">
-                    <div class="title">
-                        <h2 class="display-3 text-center mb-4 sectionTitle">Missão</h2>
-                        <hr class="underline">
-                    </div>
-                    <div class="fullText">
-                        <p class="text-lg-left sectionText">Bem-vindos ao Thalhe, um festival de dança exclusivamente dedicado aos adultos, uma celebração vibrante e envolvente da expressão artística através do movimento. Este evento foi concebido com a visão de proporcionar uma plataforma inclusiva e inspiradora para os entusiastas da dança, onde a diversidade de estilos e a paixão pelo movimento convergem em um espetáculo único. Nossa intenção é criar um ambiente que não apenas promova o aprimoramento das habilidades de dança dos participantes, mas que também cultive uma comunidade coesa, onde a troca de experiências e a celebração da arte da dança sejam os pilares fundamentais. Estamos comprometidos em criar uma experiência que não apenas desafie e inspire, mas que também nutra o crescimento individual e coletivo de todos os envolvidos. Preparem-se para uma jornada emocionante, onde a dança transcende suas fronteiras, e a expressão artística encontra um lar vibrante e acolhedor.</p>
-                    </div>      
+                <div class="fullText">
+                    <p class="text-lg-left sectionText">Bem-vindos ao Thalhe, um festival de dança exclusivamente dedicado aos adultos, uma celebração vibrante e envolvente da expressão artística através do movimento. Este evento foi concebido com a visão de proporcionar uma plataforma inclusiva e inspiradora para os entusiastas da dança, onde a diversidade de estilos e a paixão pelo movimento convergem em um espetáculo único. Nossa intenção é criar um ambiente que não apenas promova o aprimoramento das habilidades de dança dos participantes, mas que também cultive uma comunidade coesa, onde a troca de experiências e a celebração da arte da dança sejam os pilares fundamentais. Estamos comprometidos em criar uma experiência que não apenas desafie e inspire, mas que também nutra o crescimento individual e coletivo de todos os envolvidos. Preparem-se para uma jornada emocionante, onde a dança transcende suas fronteiras, e a expressão artística encontra um lar vibrante e acolhedor.</p>
+                    <button class="signUp">Sign up</button>
                 </div>                    
-            </section>  
+            </div>
+        </section>  
 
+        <!-- Seção de Missão -->
+        <section class="sectionMissao sectionContainer">
+            <div class="containerMissao">
+                <div class="title">
+                    <h2 class="display-3 text-center mb-4 sectionTitle">Missão</h2>
+                    <hr class="underline">
+                </div>
+                <div class="fullText">
+                    <p class="text-lg-left sectionText"><b>Criar espaço de acolhimento e integração para os amantes da dança expressarem sua arte.</b></p>
+                    <p class="text-lg-left sectionText"><b>Contribuir para a promoção da cultura, do bem-estar e da expressão criativa, proporcionando um evento memorável que deixará uma marca duradoura na vida de todos os envolvidos.</b> </p>
+                </div>      
+            </div>                    
+        </section>  
 
+        <!-- Seção de Visão -->
+        <section class="sectionVisao sectionContainer">
+            <div class="containerVisao">
+                <div class="opacityVisao"></div>
+                <div class="sectionContent visionSectionContent">
+                    <div class="title">
+                        <h2 class="display-3 text-center mb-4 sectionTitle">Visão</h2>                            
+                    </div>
+                    <hr class="underline">
+                    <div class="fullText">
+                        <p class="text-lg-left sectionText"> • Ser um festival de referência mundial para a dança adulta e estar presente nas principais cidades de diversos países.</p>
+                        <p class="text-lg-left sectionText"> • Almejamos criar um ambiente onde a dança se torna uma linguagem universal que conecta corações e mentes, celebrando a diversidade e a riqueza de experiências de cada participante. </p>
+                        <p class="text-lg-left sectionText"> • Nossa visão é ser um farol de criatividade, promovendo a colaboração, a aprendizagem e a valorização da dança como uma forma poderosa de expressão humana. Ao projetar um ambiente acolhedor e inspirador, aspiramos a ser um evento que não apenas encanta os sentidos, mas que também deixa uma marca duradoura, inspirando uma comunidade apaixonada pela dança a florescer e prosperar.</p>
+                    </div>  
+                </div>                        
+            </div>                    
+        </section>              
+    </main>
 
-            <section class="sectionVisao sectionContainer">
-                <div class="containerVisao">
-                    <div class="opacityVisao"></div>   
-                    <div class="sectionContent visionSectionContent">
-                        <div class="title">
-                            <h2 class="display-3 text-center mb-4 sectionTitle">Visão</h2>
-                            <hr class="underline">
+    <!-- Página de Login -->
+    <main class="mainContainer loginPage">
+        <section class="loginSection sectionContainer">
+            <div class="opacity"></div>
+            <div class="loginContent">
+                <div class="login loginContentBox">
+                    <h5>Sign in</h5>
+                    <hr class="underline">
+                    <form class="loginForm">
+                        <!-- Campo de email -->
+                        <div data-mdb-input-init class="form-outline mb-4 loginBox">
+                            <label class="form-label loginLabel" for="form2Example1">Email address</label>
+                            <input type="email" id="form2Example1 loginInput" class="form-control loginInput" />                               
                         </div>
-                        <div class="fullText">
-                            <p class="text-lg-left sectionText"> •  Ser um festival de referência mundial para a dança adulta e estar presente nas principais cidades de diversos países.</p></li>
-                            <p class="text-lg-left sectionText"> •  Almejamos criar um ambiente onde a dança se torna uma linguagem universal que conecta corações e mentes, celebrando a diversidade e a riqueza de experiências de cada participante. </p></li>
-                            <p class="text-lg-left sectionText"> •  Nossa visão é ser um farol de criatividade, promovendo a colaboração, a aprendizagem e a valorização da dança como uma forma poderosa de expressão humana. Ao projetar um ambiente acolhedor e inspirador, aspiramos a ser um evento que não apenas encanta os sentidos, mas que também deixa uma marca duradoura, inspirando uma comunidade apaixonada pela dança a florescer e prosperar.</p></li>
-                                                 
-                        </div>  
-                    </div>                        
-                </div>                    
-            </section>              
-        </main>
-
-
-
-
-        <main class="mainContainer loginPage">
-            <section class="loginSection sectionContainer">
-                <div class="opacity"></div>   
-                <div class="loginContent">
-                    <div class="login loginContentBox">
-                        <h5>Sign in</h5>
-                        <hr class="underline">
-                        <form class="loginForm">
-                            <!-- Email input -->
-                            <div data-mdb-input-init class="form-outline mb-4 loginBox">
-                                <label class="form-label loginLabel" for="form2Example1">Email address</label>
-                                <input type="email" id="form2Example1 loginInput" class="form-control loginInput" />                               
-                            </div>
-                            <!-- Password input -->
-                            <div data-mdb-input-init class="form-outline mb-4 loginBox">
-                                <label class="form-label loginLabel" for="form2Example2">Password</label>
-                                <input type="password" id="form2Example2 passwordInput" class="form-control loginInput"  />
-                            </div>
-                            <div class="row mb-4 loginOptions">
-                                <div class="col d-flex justify-content-center">
+                        <!-- Campo de senha -->
+                        <div data-mdb-input-init class="form-outline mb-4 loginBox">
+                            <label class="form-label loginLabel" for="form2Example2">Password</label>
+                            <input type="password" id="form2Example2 passwordInput" class="form-control loginInput"  />
+                        </div>
+                        <!-- Opções de lembrar senha e link para recuperação -->
+                        <div class="row mb-4 loginOptions">
+                            <div class="col d-flex justify-content-center">
                                 <!-- Checkbox -->
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
                                     <label class="form-check-label loginLabel" for="form2Example31"> Remember me </label>
                                 </div>
-                                </div>
-                                <div class="col">
-                                <!-- Simple link -->
+                            </div>
+                            <div class="col">
+                                <!-- Link para recuperação de senha -->
                                 <a href="#!">Forgot password?</a>
-                                </div>
                             </div>
-                            <!-- Submit button -->
-                            <button  type="button" id="sign in" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Sign in</button>         
-                            <p>or</p>                   
-                            <button  type="button" onclick="changeToRegisterPage()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Register</button>  
-                            </form>
-                    </div>                    
+                        </div>
+                        <!-- Botões de envio -->
+                        <button type="button" id="sign in" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Sign in</button>
+                        <p>or</p>
+                        <button type="button" onclick="changeToRegisterPage()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Register</button>
+                    </form>
+                </div>                    
+            </div>
+        </section>
+    </main>
+     <!-- História Page -->
+    <Aside class="historiaPage mainContainer">
+        <!--Grupo tallet-->
+        <section class="sectionHistoria sectionContainer">
+            <div class="containerHistoria">
+                <div class="title">
+                    <h2 class="display-3 text-center mb-4 sectionTitle">Grupo Talhe</h2>
+                    <hr class="underline">
                 </div>
-            </section>
-        </main>
-
-
-
-        <main class="mainContainer registerPage">
-            <section class="registerSection sectionContainer">
-                <div class="opacity"></div>   
-                <div class="registerContent">
-                    <div class="login registerContentBox">
-                        <h5>Register</h5>
+                <div class="fullText">
+                    <p class="text-lg-left sectionText">O cenário do mundo da dança atual tem cada vez mais evoluindo e incorporando o ballet adulto. Os studios têm aumentado suas ofertas de aulas, bem como, as empresas de vestuário e acessórios vêm se adaptando e criando linhas especiais para atender tal demanda. </p>
+                    <p class="text-lg-left sectionText">Os adultos buscam a prática do ballet, para além dos benefícios da saúde física e mental, mas sobretudo, como forma de lazer e integração social.</p>
+                    <p class="text-lg-left sectionText">Tal crescimento tem aberto espaço também para aqueles  que iniciaram seus estudos ainda criança ou até mesmo adolescentes, mas que por diversas razões não prosseguiram na profissão da dança. Dentre elas, podemos citar as poucas oportunidades no mercado de trabalho, baixa remuneração, padrões estéticos difíceis de serem alcançados, lesões e principalmente a restrição da idade que são estipuladas nas audições. </p>
+                    <p class="text-lg-left sectionText">Através de uma experiência de 30 anos com várias idas e vindas, observamos que a  procura pelas aulas de ballet adulto tem tido um aumento significativo. No passado, quando parávamos, ficávamos sem local para praticar o que nossos corpos estavam acostumados. Atualmente, já conseguimos encontrar alguns studios que oferecem estas oportunidades, porém, ainda percebemos que falta algo muito especial….O PALCO. O acolhimento para estes adultos amantes do ballet, que além de participar das aulas, almejam também,  estar no palco.</p>
+                    <p class="text-lg-left sectionText">E é pensando nisso, que nasce o Thalhe Festival. Ele vem para criar um espaço de integração e acolhimento para todos jovens adultos, adultos e seniors que desejam ter a experiência de estarem nos palcos e mostrar sua arte. Podendo ser a primeira experiência, a milésima ou até mesmo dançar um estilo ou alguma determinada variação que sempre sonhou. O que temos certeza enquanto artistas, é que o palco é "a cereja do bolo" para todo esforço da sala de aula. No Thalhe Festival, o bailarino terá a oportunidade de experiências tal qual um bailarino profissional, como aulas de aquecimento, sessões de fisioterapia, coaches para ensaios, sessões fotográficas, etc.</p>
+                </div>      
+            </div>                    
+        </section>  
+              <!--História do name-->
+              <section class="sectionNomeHistoria sectionContainer">
+                <div class="containerNomeHistoria">                   
+                    <div class="opacityNomeHistoria"></div>
+                    <div class="sectionContent historiaSectionContent">
+                        <div class="title">
+                            <h2 class="display-3 text-center mb-4 sectionTitle">História do Nome</h2>                            
+                        </div>
                         <hr class="underline">
-                        <form>
-                            <div class="form-group">
-                                <div class="labelContainer">
-                                    <label for="nome">Full Name:
-                                        <input type="text" class="form-control" id="nome" placeholder="Enter your name" required>
-                                    </label>
-                                    <label for="dataNascimento">Date of Birth:
-                                        <input type="date" class="form-control" id="dataNascimento" required>
-                                    </label>
-                                </div>                               
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="labelContainer">
-                                    <label for="email">E-mail:
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
-                                    </label>                                
-                                    <label for="telefone">Phone:
-                                        <input type="tel" class="form-control" id="telefone" placeholder="Enter your phone" required>
-                                    </label>
-                                </div>                               
-                            </div>
+                        <div class="fullText">
+                            <p class="text-lg-left sectionText"> E é pensando nisso, que nasce o Thalhe Festival. Ele vem para criar um espaço de integração e acolhimento para todos jovens adultos, adultos e seniors que desejam ter a experiência de estarem nos palcos e mostrar sua arte. Podendo ser a primeira experiência, a milésima ou até mesmo dançar um estilo ou alguma determinada variação que sempre sonhou. O que temos certeza enquanto artistas, é que o palco é "a cereja do bolo" para todo esforço da sala de aula. No Thalhe Festival, o bailarino terá a oportunidade de experiências tal qual um bailarino profissional, como aulas de aquecimento, sessões de fisioterapia, coaches para ensaios, sessões fotográficas, etc.</p>
+                           
+                        </div>  
+                    </div>                        
+                </div>                    
+            </section>              
+    </Aside>
 
-                            <div class="form-group">
-                                <div class="labelContainer">
-                                    <label for="senha">Password:
-                                        <input type="password" class="form-control" id="senha" placeholder="Enter your password" required>
-                                    </label>
-                                    <label for="confirmarSenha">Confirm Password:
-                                        <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirm your password" required>
-                                    </label>
-                                </div>                               
-                            </div>
-                            <div class="form-group">
-                                <div class="labelContainer">
-                                    <label for="cidade">City:
-                                        <input type="text" class="form-control" id="cidade" placeholder="Enter your city" required>
-                                    </label>
-                                    <label for="danceStudio">Dance Studio:
-                                        <input type="text" class="form-control" id="danceStudio" placeholder="Enter your name of studio de dance" required>
-                                    </label>    
-                                   </div>                               
-                            </div>                            
-                              <button type="submit" class="btn btn-primary buttonStyle registerButton">Sign up</button>
-                        </form>
-                    </div>
-                    
+    <!-- Página de Registro -->
+    <main class="mainContainer registerPage">
+        <section class="registerSection sectionContainer">
+            <div class="opacity"></div>
+            <div class="registerContent">
+                <div class="login registerContentBox">
+                    <h5>Register</h5>
+                    <hr class="underline">
+                    <form>
+                        <!-- Campos de nome e data de nascimento -->
+                        <div class="form-group">
+                            <div class="labelContainer">
+                                <label for="nome">Full Name:
+                                    <input type="text" class="form-control" id="nome" placeholder="Enter your name" required>
+                                </label>
+                                <label for="dataNascimento">Date of Birth:
+                                    <input type="date" class="form-control" id="dataNascimento" required>
+                                </label>
+                            </div>                               
+                        </div>
+                        <!-- Campos de email e telefone -->
+                        <div class="form-group">
+                            <div class="labelContainer">
+                                <label for="email">E-mail:
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
+                                </label>                                
+                                <label for="telefone">Phone:
+                                    <input type="tel" class="form-control" id="telefone" placeholder="Enter your phone" required>
+                                </label>
+                            </div>                               
+                        </div>
+                        <!-- Campos de senha e confirmação de senha -->
+                        <div class="form-group">
+                            <div class="labelContainer">
+                                <label for="senha">Password:
+                                    <input type="password" class="form-control" id="senha" placeholder="Enter your password" required>
+                                </label>
+                                <label for="confirmarSenha">Confirm Password:
+                                    <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirm your password" required>
+                                </label>
+                            </div>                               
+                        </div>
+                        <!-- Campos de cidade e estúdio de dança -->
+                        <div class="form-group">
+                            <div class="labelContainer">
+                                <label for="cidade">City:
+                                    <input type="text" class="form-control" id="cidade" placeholder="Enter your city" required>
+                                </label>
+                                <label for="danceStudio">Dance Studio:
+                                    <input type="text" class="form-control" id="danceStudio" placeholder="Enter your name of studio de dance" required>
+                                </label>    
+                            </div>                               
+                        </div>                            
+                        <!-- Botão de registro -->
+                        <button type="submit" class="btn btn-primary buttonStyle registerButton">Sign up</button>
+                    </form>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-
-
-
-
-
+    <!-- Scripts -->
     <script src=".Assets/scripts/bootstrap.min.js"></script>
     <script src="./Assets/scripts/script.js"></script>
 </body>
