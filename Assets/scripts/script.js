@@ -41,6 +41,7 @@ function changeToRegisterPage(){
 homeButton.addEventListener('click', ()=>{
     historiaButton.classList.remove('active')
     festivalButton.classList.remove('active')
+    registerPage.style.display = 'none';
     homeButton.classList.add('active')   
 
     loginPage.style.display = 'none';

@@ -154,7 +154,7 @@
     -moz-box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);
     box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);    
     overflow: hidden;
-    margin-top: 5vh;
+    padding-top: 4vh;
 }
 .loginContentBox h5{
     overflow: hidden;
@@ -217,7 +217,7 @@
     background-color: #fff;
     width: 70%;
     min-width: 300px;    
-    height: auto;
+    height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +227,7 @@
     -moz-box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);
     box-shadow: 1px 5px 20px 0px rgba(208,141,63,1);    
     overflow: hidden;
-    margin-top: 5vh;
+    padding-top: 4vh;
 }
 .labelContainer{
     overflow: hidden;
@@ -246,6 +246,7 @@
 }
 
 
+
 @media (max-width: 1400px) {
     .underline {
         width: 60%;
@@ -259,6 +260,9 @@
     .sectionText {
         font-size: 19px;
     }   
+    .registerContentBox{
+        height: 90%;
+    }
     
 }
 @media (max-width: 1100px) {
@@ -277,17 +281,33 @@
     .sectionText {
         font-size: 18px;
     }
+    .registerContentBox{
+        height: 95%;
+        padding-top: 0vh;
+    }
     
 }
 @media (max-width: 990px){
     #register{
         display: none;
     }
+    .registerContentBox h5{
+        margin: 0px;
+        padding-top: 1vh;
+        font-size: 22px;
+    }
+    .registerContentBox .underline{
+        margin-top:5px;
+        margin-bottom: 6px;
+    }
     #homeButton{
         display: block;
     }
     .labelContainer{
        display: block;
+    }
+    form{
+        height: 100%;
     }
     .form-group{
         
@@ -296,11 +316,13 @@
     .form-control{
         width: 150px;
         height: 30px;
+        padding-bottom: 2px;
     }
     .registerContentBox{
+        height: 96%;
+        padding-top: 0vh;
         margin-top: 0vh;
-        padding-bottom: 10vh;
-        height: 85vh;
+        padding-bottom: 1vh;
     }    
 }
 @media (max-width: 800px) {
@@ -397,11 +419,11 @@
 
 
 .homePage{
-    display: none;
+    display: grid;
 }
 .loginPage{
     display: none;
 }
 .registerPage{
-    display: grid;
+    display: none;
 }
