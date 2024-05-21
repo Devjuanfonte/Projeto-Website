@@ -24,11 +24,11 @@ function changeToLoginPage(){
 
    
 
-    homeNavButton.addEventListener('click',()=>{
-        historiaPage.style.display = 'none';
+    homeNavButton.addEventListener('click',()=>{        
         loginPage.style.display = 'none';
         registerPage.style.display = 'none';
         homePage.style.display = 'grid';
+        historiaPage.style.display = 'grid';
     })    
 }
 
@@ -43,11 +43,11 @@ function changeToRegisterPage(){
     festivalButton.classList.remove('active')
     homeButton.classList.remove('active')  
 
-    homeNavButton.addEventListener('click',()=>{
-        historiaPage.style.display = 'none';
+    homeNavButton.addEventListener('click',()=>{       
         loginPage.style.display = 'none';
         registerPage.style.display = 'none';
         homePage.style.display = 'grid';
+        historiaPage.style.display = 'grid';
     })    
 }
 
@@ -59,9 +59,9 @@ homeButton.addEventListener('click', ()=>{
     registerPage.style.display = 'none';
     homeButton.classList.add('active')  
 
-    historiaPage.style.display = 'none';
     loginPage.style.display = 'none';
-    homePage.style.display = 'grid';
+      
+    document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
 
 
 })
@@ -69,18 +69,21 @@ homeButton.addEventListener('click', ()=>{
 historiaButton.addEventListener('click', ()=>{
     homeButton.classList.remove('active')
     festivalButton.classList.remove('active')
-    historiaButton.classList.add('active')
+    registerPage.style.display = 'none';
+    historiaButton.classList.add('active')  
 
     loginPage.style.display = 'none';
-    registerPage.style.display = 'none';
-    homePage.style.display = 'none';
-    historiaPage.style.display = 'grid';
+  
+    document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
 
 })
 festivalButton.addEventListener('click', ()=>{
     homeButton.classList.remove('active')
     historiaButton.classList.remove('active')
     festivalButton.classList.add('active')
+    loginPage.style.display = 'none';
+  
+    document.querySelector('.mainSlider').style.transform = "translateX(-200vw)";
 })
 
 
@@ -237,7 +240,9 @@ function updateLogin() {
         closeMenu.addEventListener('click', ()=>{
             signOutMenu.style.display = 'none';
         })
-        
+        loginPage.style.display = 'none';
+        homePage.style.display = 'grid';
+        homeButton.classList.remove('active')
     } else {
         console.error('Elemento "headerButtons" não encontrado');
     } 
