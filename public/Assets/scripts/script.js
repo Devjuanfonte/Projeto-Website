@@ -3,7 +3,7 @@ let historiaButton = document.querySelector('#historia');
 let festivalButton = document.querySelector('#festival');
 let headerButtons = document.querySelectorAll('nav-link');
 
-
+const festivalPage = document.querySelector('.festivalPage');
 const homePage = document.querySelector('.homePage');
 const historiaPage = document.querySelector('.historiaPage');
 const loginPage = document.querySelector('.loginPage');
@@ -13,29 +13,23 @@ const body = document.querySelector('body');
 
 function changeToLoginPage(){
 
-    historiaPage.style.display = 'none';
-    homePage.style.display = 'none';
+    document.querySelector('.mainSlider').style.display = 'none';
     registerPage.style.display = 'none';
     loginPage.style.display = 'grid';
 
     historiaButton.classList.remove('active')
     festivalButton.classList.remove('active')
-    homeButton.classList.remove('active')  
-
-   
+    homeButton.classList.remove('active')     
 
     homeNavButton.addEventListener('click',()=>{        
         loginPage.style.display = 'none';
         registerPage.style.display = 'none';
-        homePage.style.display = 'grid';
-        historiaPage.style.display = 'grid';
+        document.querySelector('.mainSlider').style.display = 'flex';
     })    
 }
 
 function changeToRegisterPage(){
-    
-    homePage.style.display = 'none';
-    historiaPage.style.display = 'none';
+    document.querySelector('.mainSlider').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'grid';
 
@@ -43,11 +37,16 @@ function changeToRegisterPage(){
     festivalButton.classList.remove('active')
     homeButton.classList.remove('active')  
 
+
+    historiaButton.classList.remove('active')
+    festivalButton.classList.remove('active')
+    homeButton.classList.remove('active')  
+
     homeNavButton.addEventListener('click',()=>{       
+        document.querySelector('.mainSlider').style.display = 'flex';
         loginPage.style.display = 'none';
-        registerPage.style.display = 'none';
-        homePage.style.display = 'grid';
-        historiaPage.style.display = 'grid';
+         registerPage.style.display = 'none';
+
     })    
 }
 
