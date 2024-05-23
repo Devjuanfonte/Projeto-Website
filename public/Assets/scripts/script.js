@@ -2,7 +2,6 @@ let homeButton = document.querySelector('#home');
 let historiaButton = document.querySelector('#historia');
 let festivalButton = document.querySelector('#festival');
 let headerButtons = document.querySelectorAll('nav-link');
-
 const festivalPage = document.querySelector('.festivalPage');
 const homePage = document.querySelector('.homePage');
 const historiaPage = document.querySelector('.historiaPage');
@@ -12,7 +11,6 @@ const homeNavButton = document.querySelector('#homeButton');
 const body = document.querySelector('body');
 
 function changeToLoginPage(){
-
     document.querySelector('.mainSlider').style.display = 'none';
     registerPage.style.display = 'none';
     loginPage.style.display = 'grid';
@@ -22,9 +20,7 @@ function changeToLoginPage(){
     homeButton.classList.remove('active')     
 
     homeNavButton.addEventListener('click',()=>{        
-        loginPage.style.display = 'none';
-        registerPage.style.display = 'none';
-        document.querySelector('.mainSlider').style.display = 'flex';
+        reloadHomePage();
     })    
 }
 
@@ -33,65 +29,50 @@ function changeToRegisterPage(){
     loginPage.style.display = 'none';
     registerPage.style.display = 'grid';
 
-    historiaButton.classList.remove('active')
-    festivalButton.classList.remove('active')
-    homeButton.classList.remove('active')  
+    historiaButton.classList.remove('active');
+    festivalButton.classList.remove('active');
+    homeButton.classList.remove('active') ;
 
-
-    historiaButton.classList.remove('active')
-    festivalButton.classList.remove('active')
-    homeButton.classList.remove('active')  
-
-    homeNavButton.addEventListener('click',()=>{       
-        document.querySelector('.mainSlider').style.display = 'flex';
-        loginPage.style.display = 'none';
-         registerPage.style.display = 'none';
-
+    homeButton.addEventListener('click',()=>{       
+        reloadHomePage();
     })    
 }
-
-
-
-homeButton.addEventListener('click', ()=>{
-    historiaButton.classList.remove('active')
-    festivalButton.classList.remove('active')
-    registerPage.style.display = 'none';
-    homeButton.classList.add('active')  
-
-    loginPage.style.display = 'none';
-      
-    document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
-
-
-})
-
 historiaButton.addEventListener('click', ()=>{
-    homeButton.classList.remove('active')
-    festivalButton.classList.remove('active')
-    registerPage.style.display = 'none';
-    historiaButton.classList.add('active')  
-
-    loginPage.style.display = 'none';
-  
-    document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
+    reloadHistoriaPage();
 
 })
 festivalButton.addEventListener('click', ()=>{
-    homeButton.classList.remove('active')
-    historiaButton.classList.remove('active')
-    festivalButton.classList.add('active')
-    loginPage.style.display = 'none';
-  
-    document.querySelector('.mainSlider').style.transform = "translateX(-200vw)";
+    reloadFestivalPage();
 })
 
 
-/*window.addEventListener('scroll',()=>{
-    let height = window.scrollY;
-    if (height >=500){
-       document.querySelector('header').style.display ='none';
-    }
-})*/
+function reloadHomePage(){
+    loginPage.style.display = 'none';
+    registerPage.style.display = 'none';
+    document.querySelector('.mainSlider').style.display = 'flex';
+    homeButton.classList.add('active');    
+    historiaButton.classList.remove('active');
+    festivalButton.classList.remove('active');
+    document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
+}
+function reloadHistoriaPage(){
+    loginPage.style.display = 'none';
+    registerPage.style.display = 'none';
+    document.querySelector('.mainSlider').style.display = 'flex';
+    homeButton.classList.remove('active');    
+    historiaButton.classList.add('active');
+    festivalButton.classList.remove('active');
+    document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
+}
+function reloadFestivalPage(){
+    loginPage.style.display = 'none';
+    registerPage.style.display = 'none';
+    document.querySelector('.mainSlider').style.display = 'flex';
+    homeButton.classList.remove('active');    
+    historiaButton.classList.remove('active');
+    festivalButton.classList.add('active');
+    document.querySelector('.mainSlider').style.transform = "translateX(-200vw)";
+}
 
 document.getElementById('registerForm').addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -120,7 +101,11 @@ document.getElementById('registerForm').addEventListener('submit', async functio
         const data = await response.json();
         if (response.ok) {
             alert('Registration successful');
-            // Redirecionar ou realizar outra ação
+            // Armazenar o nome do usuário no localStorage
+            localStorage.setItem('userName', name);
+            // Atualizar a interface para mostrar o usuário logado
+            updateLogin();
+            reloadHomePage();
         } else {
             alert('Registration failed: ' + data.msg);
         }
@@ -129,7 +114,6 @@ document.getElementById('registerForm').addEventListener('submit', async functio
         alert('Registration failed: ' + err.message);
     }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Script carregado!");
@@ -157,12 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const data = await response.json();
                 if (response.ok) {
-                    updateLogin();
-                    alert('Login successful');
-                    console.log('Token:', data.token);
                     // Armazenar o token no localStorage
                     localStorage.setItem('token', data.token);
-                   
+                    // Armazenar o nome do usuário no localStorage (certifique-se que o servidor retorne o nome)
+                    localStorage.setItem('userName', data.name);
+                    // Atualizar a interface para mostrar o usuário logado
+                    updateLogin();
+                    reloadHomePage();
                 } else {
                     alert('Login failed: ' + data.msg);
                 }
@@ -231,21 +216,23 @@ function updateLogin() {
         loggedMenu.style.display = 'flex'; 
         signOutMenu.style.display = 'none';
 
-        document.querySelector('.userName').innerHTML = 'Juan Fonte'
-        
+        // Recuperar o nome do usuário do localStorage
+        const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.querySelector('.userName').innerHTML = userName; 
+        }  
+
         loggedMenu.addEventListener('click', ()=>{
             signOutMenu.style.display = 'flex';
-        })
+        });
         closeMenu.addEventListener('click', ()=>{
             signOutMenu.style.display = 'none';
-        })
+        });
+        
         loginPage.style.display = 'none';
         homePage.style.display = 'grid';
-        homeButton.classList.remove('active')
+        homeButton.classList.remove('active');
     } else {
         console.error('Elemento "headerButtons" não encontrado');
     } 
-  
-};
-   
-
+}
