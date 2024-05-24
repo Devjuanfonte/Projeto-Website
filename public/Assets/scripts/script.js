@@ -1,6 +1,6 @@
-let homeButton = document.querySelector('#home');
-let historiaButton = document.querySelector('#historia');
-let festivalButton = document.querySelector('#festival');
+let homeButton = document.querySelectorAll('#home');
+let historiaButton = document.querySelectorAll('#historia');
+let festivalButton = document.querySelectorAll('#festival');
 let headerButtons = document.querySelectorAll('nav-link');
 const festivalPage = document.querySelector('.festivalPage');
 const homePage = document.querySelector('.homePage');
@@ -12,23 +12,28 @@ const body = document.querySelector('body');
 
 function changeToLoginPage(){
     document.querySelector('.mainSlider').style.display = 'none';
+    document.querySelector('.mobileMenu').style.display = 'none';
+    console.log('vasco da gama')
     registerPage.style.display = 'none';
     loginPage.style.display = 'grid';
 
+    document.querySelector('.menuIcon').classList.remove('open');
     historiaButton.classList.remove('active')
     festivalButton.classList.remove('active')
     homeButton.classList.remove('active')     
 
-    homeNavButton.addEventListener('click',()=>{        
+    homeButton.addEventListener('click',()=>{        
         reloadHomePage();
     })    
 }
 
 function changeToRegisterPage(){
     document.querySelector('.mainSlider').style.display = 'none';
+    document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'grid';
-
+    
+    document.querySelector('.menuIcon').classList.remove('open');
     historiaButton.classList.remove('active');
     festivalButton.classList.remove('active');
     homeButton.classList.remove('active') ;
@@ -37,34 +42,46 @@ function changeToRegisterPage(){
         reloadHomePage();
     })    
 }
-historiaButton.addEventListener('click', ()=>{
-    reloadHistoriaPage();
+     homeButton.addEventListener('click',()=>{        
+            reloadHomePage();
+    })    
 
-})
-festivalButton.addEventListener('click', ()=>{
-    reloadFestivalPage();
-})
+    historiaButton.addEventListener('click', ()=>{
+        reloadHistoriaPage();
+
+    })
+    festivalButton.addEventListener('click', ()=>{
+        reloadFestivalPage();
+    })
 
 
 function reloadHomePage(){
+    document.querySelector('.menuIcon').classList.remove('open');
+    document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.add('active');    
     historiaButton.classList.remove('active');
     festivalButton.classList.remove('active');
+    
     document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
 }
 function reloadHistoriaPage(){
+    document.querySelector('.menuIcon').classList.remove('open');
+    document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.remove('active');    
     historiaButton.classList.add('active');
-    festivalButton.classList.remove('active');
+    festivalButton.classList.remove('active');    
     document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
 }
 function reloadFestivalPage(){
+    
+    document.querySelector('.menuIcon').classList.remove('open');
+    document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
     document.querySelector('.mainSlider').style.display = 'flex';
@@ -73,6 +90,27 @@ function reloadFestivalPage(){
     festivalButton.classList.add('active');
     document.querySelector('.mainSlider').style.transform = "translateX(-200vw)";
 }
+
+function updateMobileMenu() {
+    let slider = document.querySelector('.mainSlider');
+    var computedStyle = window.getComputedStyle(slider);
+    var currentDisplay = computedStyle.display;
+
+    if (currentDisplay === 'flex') {
+        slider.style.display = 'none';
+        document.querySelector('.mobileMenu').style.display = 'flex';
+        document.querySelector('.menuIcon').classList.add('open'); // Adiciona a classe open para rotacionar o ícone
+    } else {
+        document.querySelector('.mobileMenu').style.display = 'none';
+        slider.style.display = 'flex';
+        document.querySelector('.menuIcon').classList.remove('open'); // Remove a classe open para reverter a rotação do ícone
+    }
+}
+
+
+
+
+
 
 document.getElementById('registerForm').addEventListener('submit', async function (e) {
     e.preventDefault();

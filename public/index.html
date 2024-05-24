@@ -10,56 +10,63 @@
 <body>
     <!-- Cabeçalho com barra de navegação -->
     <header class="header" id="headerHome">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light headerNavbar">
+        <div class="headerContainer d-flex justify-content-between align-items-center">
             <!-- Logotipo -->
-            <a class="navbar-brand" href="#">
-                <img src="" class="logo" alt="logo?">
-            </a>
-            <!-- Botão para colapsar o menu em dispositivos móveis -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Links do menu de navegação -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active" id="home">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item" id="historia">
-                        <a class="nav-link" href="#">History</a>
-                    </li>
-                    <li class="nav-item" id="festival">
-                        <a class="nav-link" href="#">Festival</a>
-                    </li>
-                </ul>
+            <div class="firstPart part">
+                <a class="navbar-brand" href="#">
+                    <img src="" class="logo" alt="logo">
+                </a>
             </div>
-             <!-- Mobile nav bar -->
-            <div></div>
-
-
-            <!-- Botões de login e registro -->
-            <div class="ml-auto d-flex align-items-center" id="headerButtons">
-                <button id="login" class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()">Login</button>
-                <button id="homeButton" class="btn btn-primary buttonStyle" onclick="reloadHomePage()">Home</button>
-                <button id="register" class="btn btn-primary buttonStyle" onclick="changeToRegisterPage()">Register</button>
-            </div>
-                 <!-- Menu com usuário logado -->
-
-            <div class="menuLoggedContainer">
-                <div class="ml-auto d-flex align-items-center" id="logged"> 
-                    <div class="loggedIcon"></div>
-                    <span class="userName">Rayana Fonte</span>
+            <div class="secondPart part">
+                <div class="headerNavButtons" id="navbarNav">         
+                    <a class="nav-link nav-item active" class="home" href="#">Home</a>
+                    <a class="nav-link nav-item"  class="historia" href="#">History</a>
+                    <a class="nav-link nav-item"  class="festival" href="#">Festival</a>          
                 </div>
-                <div class="menuLogged">
-                   <a href="" class="loggout">Sign Out</a>
-                   <div class="closeMenu" style="color: red;">X</div>
-                </div>
-
             </div>
-            
-        </nav>
+            <div class="thirdPart part d-flex align-items-center">
+                <!-- Botões de login e registro -->
+                <div id="headerButtons" class="ml-auto d-flex align-items-center">
+                    <button id="login" class="btn btn-outline-primary mr-2 buttonStyle" onclick="changeToLoginPage()">Login</button>
+                    <button id="homeButton" class="btn btn-primary buttonStyle" onclick="reloadHomePage()">Home</button>
+                    <button id="register" class="btn btn-primary buttonStyle" onclick="changeToRegisterPage()">Register</button>
+                </div>
+                <div class="menuLoggedContainer ml-3">
+                    <div id="logged" class="ml-auto d-flex align-items-center">
+                        <div class="loggedIcon"></div>
+                        <span class="userName">Rayana Fonte</span>
+                    </div>
+                    <div class="menuLogged">
+                        <a href="#" class="logout">Sign Out</a>
+                        <div class="closeMenu" style="color: red;">X</div>
+                    </div>                    
+                </div>              
+              
+                 <div class="menuIcon" onclick="updateMobileMenu()"></div>              
+                
+            </div>           
+        </div>
     </header>
-
+           <!-- Mobile nav bar -->
+           <div class="mobileMenu">
+            <div class="mobileMenuContainer">
+                <div class="nav-item navMobile" onclick=" reloadHomePage()" id="home">
+                    <span class="nav-link" >Home</span>
+                </div>
+                <div  class="nav-item navMobile" onclick=" reloadHistoriaPage()" id="historia">
+                    <span class="nav-link">History</span>
+                </div>
+                <div  class="nav-item navMobile" onclick=" reloadFestivalPage()" id="festival">
+                    <span class="nav-link" >Festival</span>
+                </div>
+                <div  class="nav-item navMobile" id="login">
+                    <span class="nav-link"  onclick="changeToLoginPage()">Login</span>
+                </div>                
+                <div  class="nav-item navMobile" id="Register"  onclick="changeToRegisterPage()">
+                    <span class="nav-link" >Register</span>
+                </div>
+            </div>
+        </div>
      <main class="mainSlider">
 <!-- Home page-->
             <div class="mainContainer homePage">
@@ -151,10 +158,7 @@
                             <hr class="underline">
                         </div>
                         <div class="fullText">
-                            <p class="text-lg-left sectionText">The current dance world is increasingly evolving and incorporating adult ballet. Studios have been expanding their class offerings, and clothing and accessory companies have been adapting by creating special lines to meet this demand.</p>
-                            <p class="text-lg-left sectionText">Adults seek ballet practice not only for its physical and mental health benefits but also as a form of leisure and social integration. This growth has also created space for those who began their studies as children or teenagers but did not pursue a professional dance career due to various reasons. These reasons include limited job opportunities, low wages, challenging aesthetic standards, injuries, and especially the age restrictions imposed in auditions.</p>
-                            <p class="text-lg-left sectionText">With 30 years of experience and many comings and goings, we have observed a significant increase in the demand for adult ballet classes. In the past, when we stopped, there was no place to practice what our bodies were accustomed to. Nowadays, we can find some studios offering these opportunities, but something very special is still missing... THE STAGE. The space for these adult ballet lovers who, besides participating in classes, also dream of being on stage.</p>
-                            <p class="text-lg-left sectionText">It is with this in mind that the Thalhe Festival was born. It aims to create an integrative and welcoming space for young adults, adults, and seniors who wish to experience being on stage and showcasing their art. Whether it is their first experience, their thousandth, or performing a style or variation they have always dreamed of. What we know as artists is that the stage is "the icing on the cake" for all the effort put into the classroom. At the Thalhe Festival, dancers will have the opportunity to experience everything a professional dancer does, including warm-up classes, physiotherapy sessions, rehearsal coaches, photo sessions, and more. </p>
+                          
                         </div>      
                     </div>                    
                 </section>  
@@ -213,7 +217,6 @@
                         </div>
                         <!-- Botões de envio -->
                         <button type="button" id="sign-in" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Sign in</button>
-                        <button id="protected-route-button" class="btn btn-primary">Access Protected Route</button>
                         <p>or</p>
                         <button type="button" onclick="changeToRegisterPage()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Register</button>
                     </form>
