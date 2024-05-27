@@ -6,6 +6,7 @@
 body{
     overflow-x: hidden;
     touch-action: manipulation;
+    max-height: 300vh !important;
 }
 
 /*Styles Gerais:*/
@@ -121,7 +122,7 @@ header{
 }
 .mainSlider{
     display: flex;
-    width: 200vh;
+    width: 200vw;
     transition: all ease 1s;
     
 }
@@ -220,9 +221,7 @@ header{
 
 
 /*História Page*/
-.historiaPage{
-    max-height: 400vh;    
-}
+
 .containerHistoria{
     width: 80vw;
     display: flex;
@@ -404,6 +403,9 @@ header{
     font-size: 25px; 
     font-family: Arial, Helvetica, sans-serif;
 }
+.registerButton{
+    margin-top: 5vh;
+}
 
 .menuLoggedContainer{
 display: flex;
@@ -518,8 +520,6 @@ display: none;
     }
     .registerContentBox{
         height: 96%;
-        padding-top: 0vh;
-        margin-top: 0vh;
         padding-bottom: 1vh;
     }    
     .historiaPage .fullText .sectionText{
@@ -529,7 +529,21 @@ display: none;
 }
 @media (max-width: 800px) {
     .headerNavButtons{
-        display: none;
+        margin-right:15px;
+    }
+    .navbar-brand{
+        padding-right: 0;
+    }
+    .nav-item{
+        font-size: 12px;
+        margin: 2px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+    .thirdPart{
+        width: 35px;
+        height: 35px;
+        padding-right: 2px;
     }
     #headerButtons{
         display: none !important;
@@ -551,6 +565,10 @@ display: none;
     .containerHistoria{
         width: 85Vw;
     }
+    .menuIcon{
+        display: block;
+    }
+    
 }
              
 @media (max-width: 460px) {
@@ -559,10 +577,7 @@ display: none;
         font-size: 24px;
         margin-top: 10px;
     }
-    .buttonStyle{
-        padding: 3px 6px;
-        font-size: 12px
-    }
+   
     .sectionText {
         font-size: 12px;
     }   
@@ -575,10 +590,7 @@ display: none;
         font-family: 'Playfair Display', serif;
         font-size: 20px;
     }
-    .buttonStyle{
-        padding: 2px 4px;
-        font-size: 8px
-    }
+   
     .sectionText {
         font-size: 10px;
     }   
@@ -631,7 +643,9 @@ display: none;
 
 
 
-
+.menuIcon{
+    display: none;
+}
 .loginPage{
     display: none;
 }

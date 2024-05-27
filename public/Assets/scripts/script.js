@@ -1,6 +1,6 @@
-let homeButton = document.querySelectorAll('#home');
-let historiaButton = document.querySelectorAll('#historia');
-let festivalButton = document.querySelectorAll('#festival');
+let homeButton = document.querySelector('#homeNavButton');
+let historiaButton = document.querySelector('#historyNavButton');
+let festivalButton = document.querySelector('#festivalNavButton');
 let headerButtons = document.querySelectorAll('nav-link');
 const festivalPage = document.querySelector('.festivalPage');
 const homePage = document.querySelector('.homePage');
@@ -11,6 +11,7 @@ const homeNavButton = document.querySelector('#homeButton');
 const body = document.querySelector('body');
 
 function changeToLoginPage(){
+    document.querySelector('.global').style.display = 'block';
     document.querySelector('.mainSlider').style.display = 'none';
     document.querySelector('.mobileMenu').style.display = 'none';
     console.log('vasco da gama')
@@ -28,6 +29,7 @@ function changeToLoginPage(){
 }
 
 function changeToRegisterPage(){
+    document.querySelector('.global').style.display = 'block';
     document.querySelector('.mainSlider').style.display = 'none';
     document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
@@ -42,7 +44,7 @@ function changeToRegisterPage(){
         reloadHomePage();
     })    
 }
-     homeButton.addEventListener('click',()=>{        
+     homeButton.addEventListener('click',()=>{            
             reloadHomePage();
     })    
 
@@ -57,6 +59,7 @@ function changeToRegisterPage(){
 
 function reloadHomePage(){
     document.querySelector('.menuIcon').classList.remove('open');
+    document.querySelector('.global').style.display = 'block';
     document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
@@ -69,6 +72,7 @@ function reloadHomePage(){
 }
 function reloadHistoriaPage(){
     document.querySelector('.menuIcon').classList.remove('open');
+    document.querySelector('.global').style.display = 'block';
     document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
@@ -78,9 +82,9 @@ function reloadHistoriaPage(){
     festivalButton.classList.remove('active');    
     document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
 }
-function reloadFestivalPage(){
-    
+function reloadFestivalPage(){    
     document.querySelector('.menuIcon').classList.remove('open');
+    document.querySelector('.global').style.display = 'block';
     document.querySelector('.mobileMenu').style.display = 'none';
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
@@ -92,17 +96,19 @@ function reloadFestivalPage(){
 }
 
 function updateMobileMenu() {
-    let slider = document.querySelector('.mainSlider');
+    let slider = document.querySelector('.global');
     var computedStyle = window.getComputedStyle(slider);
     var currentDisplay = computedStyle.display;
 
-    if (currentDisplay === 'flex') {
+    if (currentDisplay === 'block') {
         slider.style.display = 'none';
         document.querySelector('.mobileMenu').style.display = 'flex';
         document.querySelector('.menuIcon').classList.add('open'); // Adiciona a classe open para rotacionar o ícone
-    } else {
+        
+  
+    }else {
         document.querySelector('.mobileMenu').style.display = 'none';
-        slider.style.display = 'flex';
+        slider.style.display = 'block';
         document.querySelector('.menuIcon').classList.remove('open'); // Remove a classe open para reverter a rotação do ícone
     }
 }
