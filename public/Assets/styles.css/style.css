@@ -7,6 +7,7 @@ body{
     overflow-x: hidden;
     touch-action: manipulation;
     max-height: 300vh !important;
+    transition:  all ease 2s !important;
 }
 
 /*Styles Gerais:*/
@@ -79,17 +80,30 @@ header{
 
 .menuIcon.open {
     transform: rotate(90deg); /* Rotação para indicar o menu aberto */
+    opacity: 1;
+
 }
 /* Menu Mobile */
-.mobileMenu{
+.mobileMenu {
     width: 100vw;
     height: calc(100vh - 100px);
     background-color: #000;
     display: none;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in, max-height 1s ease-in;
 }
-.mobileMenuContainer{
+
+.mobileMenu.visible {
+    display: flex;
+    opacity: 1;
+    max-height: calc(100vh - 100px);
+}
+
+.mobileMenuContainer {
     width: 80vw;
     height: 100%;
     display: flex;
@@ -98,10 +112,8 @@ header{
     align-items: center;
     color: #fff !important;
 }
-.nav-item{
-    cursor: pointer;
-}
-.navMobile span{
+
+.navMobile span {
     color: #fff !important;
     font-weight: bolder;
     cursor: pointer !important;
@@ -270,8 +282,39 @@ header{
     align-items: center;
     justify-content: center;
 }
-
-
+/*RAYANA FONTE*/
+.containerBio{
+    width: 80vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+ }
+.sectionBio{
+    overflow: hidden;
+    margin-top: 30px;
+}
+/*Imagem Bio*/
+.bioImgContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bioImg{
+    background-image: url('../imgs/Bioimg.JPG');
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    max-width: 500px;
+    max-height: 900px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 5PX 8px 16px rgba(0, 0, 0, 0.6);
+}
 
 /*Login Page*/
 
@@ -568,6 +611,9 @@ display: none;
     .menuIcon{
         display: block;
     }
+    body{
+        max-width: 800vh !important;
+    }
     
 }
              
@@ -584,8 +630,15 @@ display: none;
     .containerHistoria{
         width: 95Vw;
     }
+    .bioImg{
+        max-width: 80vw !important;
+    }
+    .sectionBio{
+        width: 90vw;
+        height: 100vh !important;
+    }
 }
-@media (max-width: 300px) {
+@media (max-width: 320px) {
     .sectionTitle {
         font-family: 'Playfair Display', serif;
         font-size: 20px;
@@ -594,6 +647,10 @@ display: none;
     .sectionText {
         font-size: 10px;
     }   
+    .sectionBio{
+        width: 90vw;
+        height: 130vh !important;
+    }
 }
 
 
@@ -641,8 +698,15 @@ display: none;
 
 
 
-
-
+.mainContainer{
+    transition: all ease 0.3s;
+}
+.historiaPage{
+    display: none;
+}
+.festivalPage{
+    display: none;
+}
 .menuIcon{
     display: none;
 }

@@ -58,6 +58,8 @@ function changeToRegisterPage(){
 
 
 function reloadHomePage(){
+    festivalPage.style.display ='none';
+    historiaPage.style.display ='none';
     document.querySelector('.menuIcon').classList.remove('open');
     document.querySelector('.global').style.display = 'block';
     document.querySelector('.mobileMenu').style.display = 'none';
@@ -69,8 +71,12 @@ function reloadHomePage(){
     festivalButton.classList.remove('active');
     
     document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
+    festivalPage.style.display ='none';
+    historiaPage.style.display ='none';
 }
 function reloadHistoriaPage(){
+    festivalPage.style.display ='none';
+    historiaPage.style.display ='block';
     document.querySelector('.menuIcon').classList.remove('open');
     document.querySelector('.global').style.display = 'block';
     document.querySelector('.mobileMenu').style.display = 'none';
@@ -83,6 +89,8 @@ function reloadHistoriaPage(){
     document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
 }
 function reloadFestivalPage(){    
+    historiaPage.style.display ='block';
+    festivalPage.style.display ='block';
     document.querySelector('.menuIcon').classList.remove('open');
     document.querySelector('.global').style.display = 'block';
     document.querySelector('.mobileMenu').style.display = 'none';
@@ -97,19 +105,30 @@ function reloadFestivalPage(){
 
 function updateMobileMenu() {
     let slider = document.querySelector('.global');
-    var computedStyle = window.getComputedStyle(slider);
+    let mobileMenu = document.querySelector('.mobileMenu');
+    let menuIcon = document.querySelector('.menuIcon');
+    
+    var computedStyle = window.getComputedStyle(mobileMenu);
     var currentDisplay = computedStyle.display;
-
-    if (currentDisplay === 'block') {
+    
+    if (currentDisplay === 'none' || !mobileMenu.classList.contains('visible')) {
+        // Exibir o menu móvel com animação
         slider.style.display = 'none';
-        document.querySelector('.mobileMenu').style.display = 'flex';
-        document.querySelector('.menuIcon').classList.add('open'); // Adiciona a classe open para rotacionar o ícone
-        
-  
-    }else {
-        document.querySelector('.mobileMenu').style.display = 'none';
-        slider.style.display = 'block';
-        document.querySelector('.menuIcon').classList.remove('open'); // Remove a classe open para reverter a rotação do ícone
+        mobileMenu.style.display = 'flex';
+        // Forçar reflow para garantir que a transição seja aplicada
+        void mobileMenu.offsetWidth;
+        mobileMenu.classList.add('visible');
+        // Adicionar a classe open ao ícone do menu
+        menuIcon.classList.add('open');
+    } else {
+        // Ocultar o menu móvel com animação
+        mobileMenu.classList.remove('visible');
+        mobileMenu.addEventListener('transitionend', function() {
+            mobileMenu.style.display = 'none';
+            slider.style.display = 'block';
+        }, { once: true });
+        // Remover a classe open do ícone do menu
+        menuIcon.classList.remove('open');
     }
 }
 
