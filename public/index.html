@@ -21,7 +21,7 @@
                 <div class="headerNavButtons" id="navbarNav">         
                     <a class="nav-link nav-item active" id="homeNavButton" href="#">Home</a>
                     <a class="nav-link nav-item" id="historyNavButton" href="#">History</a>
-                    <a class="nav-link nav-item"  id="festivalNavButton" href="#">Festival</a>          
+                    <a class="nav-link nav-item"  id="biographyNavButton" href="#">biography</a>          
                 </div>
             </div>
             <div class="thirdPart part d-flex align-items-center">
@@ -40,288 +40,234 @@
                         <a href="#" class="logout">Sign Out</a>
                         <div class="closeMenu" style="color: red;">X</div>
                     </div>                    
-                </div>              
-              
-                 <div class="menuIcon" onclick="updateMobileMenu()"></div>              
-                
+                </div>     
+                 <!-- Mobile nav bar -->
+           <div class="mobileMenu">
+                <div class="menuIcon" onclick="updateMobileMenu()"></div>
+                    <div class="mobileMenuContainer">
+                        <div class="menuBox">
+                            <div class="closeMenu" onclick="closeMenu()">X</div>
+                        </div>
+                        <div class="nav navMobile">
+                            <div class="navItemMobile " onclick=" reloadHomePage()" id="home">
+                                <span class="nav-link" >Home</span>
+                            </div>
+                            <div  class="navItemMobile" onclick=" reloadHistoriaPage()" id="historia">
+                                <span class="nav-link">History</span>
+                            </div>
+                            <div  class="navItemMobile " onclick=" reloadbiographyPage()" id="biography">
+                                <span class="nav-link" >biography</span>
+                            </div>
+                            <div  class="navItemMobile" id="login">
+                                <span class="nav-link"  onclick="changeToLoginPage()">Login</span>
+                            </div>                
+                            <div  class="navItemMobile " id="Register"  onclick="changeToRegisterPage()">
+                                <span class="nav-link" >Register</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
             </div>           
         </div>
     </header>
-           <!-- Mobile nav bar -->
-           <div class="mobileMenu">
-            <div class="mobileMenuContainer">
-                <div class="nav-item navMobile" onclick=" reloadHomePage()" id="home">
-                    <span class="nav-link" >Home</span>
-                </div>
-                <div  class="nav-item navMobile" onclick=" reloadHistoriaPage()" id="historia">
-                    <span class="nav-link">History</span>
-                </div>
-                <div  class="nav-item navMobile" onclick=" reloadFestivalPage()" id="festival">
-                    <span class="nav-link" >Festival</span>
-                </div>
-                <div  class="nav-item navMobile" id="login">
-                    <span class="nav-link"  onclick="changeToLoginPage()">Login</span>
-                </div>                
-                <div  class="nav-item navMobile" id="Register"  onclick="changeToRegisterPage()">
-                    <span class="nav-link" >Register</span>
-                </div>
-            </div>
-        </div>
-        <div class="global">
-            <main class="mainSlider">
-                <!-- Home page-->
-                            <div class="mainContainer homePage">
-                                <section class="homeSection sectionContainer">
-                                    <div class="opacity"></div>
-                                    <div class="homeSectionContent">
-                                        <!-- Título e descrição do projeto -->
-                                        <div class="title">
-                                            <h2 class="display-3 text-center mb-4 sectionTitle">Thalhe Festival: A Cultural Project</h2>
-                                            <hr class="underline">
-                                        </div>
-                                        <div class="fullText">
-                                            <p class="text-lg-left sectionText">Welcome to Thalhe, a dance festival exclusively dedicated to adults, a vibrant and engaging celebration of artistic expression through movement. This event was conceived with the vision of providing an inclusive and inspiring platform for dance enthusiasts, where the diversity of styles and passion for movement converge in a unique spectacle. Our intention is to create an environment that not only promotes the enhancement of participants' dance skills but also fosters a cohesive community where the exchange of experiences and the celebration of the art of dance are fundamental pillars. We are committed to creating an experience that not only challenges and inspires but also nurtures the individual and collective growth of all involved. Get ready for an exciting journey, where dance transcends its boundaries, and artistic expression finds a vibrant and welcoming home.</p>
-                                            <button class="signUp">Sign up</button>
-                                        </div>                    
+    <div class="global">
+        <main class="mainSlider">
+            <!-- Home page-->
+                        <div class="mainContainer homePage">
+                            <section class="homeSection sectionContainer">
+                                <div class="opacity"></div>
+                                <div class="homeSectionContent">
+                                    <!-- Título e descrição do projeto -->
+                                    <div class="title">
+                                        <h2 class="display-3 text-center mb-4 sectionTitle">Thalhe Festival: A Cultural Project</h2>
+                                        <hr class="underline">
                                     </div>
-                                </section>  
-                
-                                <!-- Seção de Missão -->
-                                <section class="sectionMissao sectionContainer">
-                                    <div class="containerMissao">
-                                        <div class="title">
-                                            <h2 class="display-3 text-center mb-4 sectionTitle">Mission</h2>
-                                            <hr class="underline">
-                                        </div>
-                                        <div class="fullText">
-                                            <p class="text-lg-left sectionText"><b>To create a welcoming and integrative space for dance lovers to express their art. To contribute to the promotion of culture, well-being, and creative expression by providing a memorable event that will leave a lasting impact on the lives of all involved.</b></p>
-                                        </div>      
+                                    <div class="fullText">
+                                        <p class="text-lg-left sectionText">Welcome to Thalhe, a dance festival exclusively dedicated to adults, a vibrant and engaging celebration of artistic expression through movement. This event was conceived with the vision of providing an inclusive and inspiring platform for dance enthusiasts, where the diversity of styles and passion for movement converge in a unique spectacle. Our intention is to create an environment that not only promotes the enhancement of participants' dance skills but also fosters a cohesive community where the exchange of experiences and the celebration of the art of dance are fundamental pillars. We are committed to creating an experience that not only challenges and inspires but also nurtures the individual and collective growth of all involved. Get ready for an exciting journey, where dance transcends its boundaries, and artistic expression finds a vibrant and welcoming home.</p>
+                                        <button class="signUp">Sign up</button>
                                     </div>                    
-                                </section>  
-                
-                                <!-- Seção de Visão -->
-                                <section class="sectionVisao sectionContainer">
-                                    <div class="containerVisao">
-                                        <div class="opacityVisao"></div>
-                                        <div class="sectionContent visionSectionContent">
+                                </div>
+                            </section>                
+                        </div>               
+                        <!-- História Page -->
+                        <div class="historiaPage mainContainer">
+                            <!--Grupo tallet-->
+                            <section class="sectionHistoria sectionContainer">
+                                <div class="containerHistoria">
+                                    <div class="title">
+                                        <h2 class="display-3 text-center mb-4 sectionTitle">Talhe Group</h2>
+                                        <hr class="underline">
+                                    </div>
+                                    <div class="fullText">
+                                        <p class="text-lg-left sectionText">The current dance world is increasingly evolving and incorporating adult ballet. Studios have been expanding their class offerings, and clothing and accessory companies have been adapting by creating special lines to meet this demand.</p>
+                                        <p class="text-lg-left sectionText">Adults seek ballet practice not only for its physical and mental health benefits but also as a form of leisure and social integration. This growth has also created space for those who began their studies as children or teenagers but did not pursue a professional dance career due to various reasons. These reasons include limited job opportunities, low wages, challenging aesthetic standards, injuries, and especially the age restrictions imposed in auditions.</p>
+                                        <p class="text-lg-left sectionText">With 30 years of experience and many comings and goings, we have observed a significant increase in the demand for adult ballet classes. In the past, when we stopped, there was no place to practice what our bodies were accustomed to. Nowadays, we can find some studios offering these opportunities, but something very special is still missing... THE STAGE. The space for these adult ballet lovers who, besides participating in classes, also dream of being on stage.</p>
+                                        <p class="text-lg-left sectionText">It is with this in mind that the Thalhe Festival was born. It aims to create an integrative and welcoming space for young adults, adults, and seniors who wish to experience being on stage and showcasing their art. Whether it is their first experience, their thousandth, or performing a style or variation they have always dreamed of. What we know as artists is that the stage is "the icing on the cake" for all the effort put into the classroom. At the Thalhe Festival, dancers will have the opportunity to experience everything a professional dancer does, including warm-up classes, physiotherapy sessions, rehearsal coaches, photo sessions, and more. </p>
+                                    </div>      
+                                </div>                    
+                            </section>  
+                                <!--História do name-->
+                                <section class="sectionNomeHistoria sectionContainer">
+                                    <div class="containerNomeHistoria">                   
+                                        <div class="opacityNomeHistoria"></div>
+                                        <div class="sectionContent historiaSectionContent">
                                             <div class="title">
-                                                <h2 class="display-3 text-center mb-4 sectionTitle">Vision</h2>                            
+                                                <h2 class="display-3 text-center mb-4 sectionTitle">Name</h2>                            
                                             </div>
                                             <hr class="underline">
                                             <div class="fullText">
-                                                <p class="text-lg-left sectionText"> To be a world-renowned festival for adult dance, present in major cities across various countries. We aim to create an environment where dance becomes a universal language that connects hearts and minds, celebrating the diversity and richness of each participant's experiences.
+                                                <p class="text-lg-left sectionText"> E é pensando nisso, que nasce o Thalhe Festival. Ele vem para criar um espaço de integração e acolhimento para todos jovens adultos, adultos e seniors que desejam ter a experiência de estarem nos palcos e mostrar sua arte. Podendo ser a primeira experiência, a milésima ou até mesmo dançar um estilo ou alguma determinada variação que sempre sonhou. O que temos certeza enquanto artistas, é que o palco é "a cereja do bolo" para todo esforço da sala de aula. No Thalhe Festival, o bailarino terá a oportunidade de experiências tal qual um bailarino profissional, como aulas de aquecimento, sessões de fisioterapia, coaches para ensaios, sessões fotográficas, etc.</p>
                                             </div>  
                                         </div>                        
                                     </div>                    
-                                </section>              
-                            </div>
-                
-                            <!-- História Page -->
-                            <div class="historiaPage mainContainer">
-                                <!--Grupo tallet-->
-                                <section class="sectionHistoria sectionContainer">
-                                    <div class="containerHistoria">
-                                        <div class="title">
-                                            <h2 class="display-3 text-center mb-4 sectionTitle">Talhe Group</h2>
-                                            <hr class="underline">
-                                        </div>
+                                </section>                              
+                        </div>
+                         <!-- biography -->
+                         <div class="biographyPage mainContainer">
+                            <!--Biography-->
+                            <section class="sectionBio sectionContainer">
+                                <div class="containerBio">
+                                    <div class="title">
+                                        <h2 class="display-3 text-center mb-4 sectionTitle">Thais Sarmento</h2>
+                                        <hr class="underline">
+                                    </div>                                          
                                         <div class="fullText">
-                                            <p class="text-lg-left sectionText">The current dance world is increasingly evolving and incorporating adult ballet. Studios have been expanding their class offerings, and clothing and accessory companies have been adapting by creating special lines to meet this demand.</p>
-                                            <p class="text-lg-left sectionText">Adults seek ballet practice not only for its physical and mental health benefits but also as a form of leisure and social integration. This growth has also created space for those who began their studies as children or teenagers but did not pursue a professional dance career due to various reasons. These reasons include limited job opportunities, low wages, challenging aesthetic standards, injuries, and especially the age restrictions imposed in auditions.</p>
-                                            <p class="text-lg-left sectionText">With 30 years of experience and many comings and goings, we have observed a significant increase in the demand for adult ballet classes. In the past, when we stopped, there was no place to practice what our bodies were accustomed to. Nowadays, we can find some studios offering these opportunities, but something very special is still missing... THE STAGE. The space for these adult ballet lovers who, besides participating in classes, also dream of being on stage.</p>
-                                            <p class="text-lg-left sectionText">It is with this in mind that the Thalhe Festival was born. It aims to create an integrative and welcoming space for young adults, adults, and seniors who wish to experience being on stage and showcasing their art. Whether it is their first experience, their thousandth, or performing a style or variation they have always dreamed of. What we know as artists is that the stage is "the icing on the cake" for all the effort put into the classroom. At the Thalhe Festival, dancers will have the opportunity to experience everything a professional dancer does, including warm-up classes, physiotherapy sessions, rehearsal coaches, photo sessions, and more. </p>
-                                        </div>      
-                                    </div>                    
-                                </section>  
-                                    <!--História do name-->
-                                    <section class="sectionNomeHistoria sectionContainer">
-                                        <div class="containerNomeHistoria">                   
-                                            <div class="opacityNomeHistoria"></div>
-                                            <div class="sectionContent historiaSectionContent">
-                                                <div class="title">
-                                                    <h2 class="display-3 text-center mb-4 sectionTitle">História do Nome</h2>                            
-                                                </div>
-                                                <hr class="underline">
-                                                <div class="fullText">
-                                                    <p class="text-lg-left sectionText"> E é pensando nisso, que nasce o Thalhe Festival. Ele vem para criar um espaço de integração e acolhimento para todos jovens adultos, adultos e seniors que desejam ter a experiência de estarem nos palcos e mostrar sua arte. Podendo ser a primeira experiência, a milésima ou até mesmo dançar um estilo ou alguma determinada variação que sempre sonhou. O que temos certeza enquanto artistas, é que o palco é "a cereja do bolo" para todo esforço da sala de aula. No Thalhe Festival, o bailarino terá a oportunidade de experiências tal qual um bailarino profissional, como aulas de aquecimento, sessões de fisioterapia, coaches para ensaios, sessões fotográficas, etc.</p>
-                                                </div>  
-                                            </div>                        
-                                        </div>                    
-                                    </section>      
-                                    <section class="sectionBio sectionContainer">
-                                        <div class="containerBio">
-                                            <div class="title">
-                                                <h2 class="display-3 text-center mb-4 sectionTitle">Thais Sarmento</h2>
-                                                <hr class="underline">
-                                            </div>                                          
-                                                <div class="fullText">
-                                                    <p class="text-lg-left sectionText">Thais Sarmento began her dance studies in classical ballet at the age of 8 in Rio de Janeiro, Brazil. Under the guidance of Jorge Texeira, she achieved soloist and principal dancer positions with Grupo Thalhe. Throughout her career, Thais has participated in numerous contests across Brazil, consistently earning awards and recognition.</p>
-                                                    <p class="text-lg-left sectionText">Thais has performed with renowned dance partners, including Andre Valadon (National Dance Alive Ballet, USA), Welligton Gomes (Rio de Janeiro's Municipal Theater), Reginaldo Oliveira (Salzburger Landestheater, Germany), William Pedro (Bejart), Daniel Deivison (San Francisco Ballet), and Alysson Rocha (Ballett Dortmund). She completed her graduation at Petite Danse, becoming a certified professional teacher.</p>
-                                                    <p class="text-lg-left sectionText">As a soloist with Companhia Brasileira de Ballet, Thais performed in various ballets such as Coppelia, Nutcracker, Don Quixote, Paquita, La Fille Mal Gardée, Giselle, Le Corsaire, La Esmeralda, Grand Pas Classique, and numerous Balanchine ballets.</p>
-                                                    <p class="text-lg-left sectionText">In 2018, Thais relocated to the United States with her family, obtaining permanent residence through the EB2-NIW Visa. After a hiatus, she returned to dance in 2020, joining Relevé-tios Dance Company. Thais has performed as a guest artist in various local studio shows and events, including The Steinbrenner Family Foundation Children’s Christmas Concerts with The Florida Orchestra. </p>
-                                                    <p class="text-lg-left sectionText">In addition to her dance career, Thais is a dedicated businesswoman, holding multiple college degrees in Graphic and Industrial Design and Business Administration. She also works as a ballet teacher and coach, continuing to inspire and train the next generation of dancers. </p>
-                                                </div>                                           
-                                        </div>                    
-                                    </section> 
-                                       <section class="bioImgContainer">
-                                            <div class="bioImg"></div>
-                                       </section>
-                                       <section class="sectionBio sectionContainer">
-                                        <div class="containerBio">
-                                            <div class="title">
-                                                <h2 class="display-3 text-center mb-4 sectionTitle">Rayana Fonte</h2>
-                                                <hr class="underline">
-                                            </div>                                          
-                                                <div class="fullText">
-                                                    <p class="text-lg-left sectionText">Thais Sarmento began her dance studies in classical ballet at the age of 8 in Rio de Janeiro, Brazil. Under the guidance of Jorge Texeira, she achieved soloist and principal dancer positions with Grupo Thalhe. Throughout her career, Thais has participated in numerous contests across Brazil, consistently earning awards and recognition.</p>
-                                                    <p class="text-lg-left sectionText">Thais has performed with renowned dance partners, including Andre Valadon (National Dance Alive Ballet, USA), Welligton Gomes (Rio de Janeiro's Municipal Theater), Reginaldo Oliveira (Salzburger Landestheater, Germany), William Pedro (Bejart), Daniel Deivison (San Francisco Ballet), and Alysson Rocha (Ballett Dortmund). She completed her graduation at Petite Danse, becoming a certified professional teacher.</p>
-                                                    <p class="text-lg-left sectionText">As a soloist with Companhia Brasileira de Ballet, Thais performed in various ballets such as Coppelia, Nutcracker, Don Quixote, Paquita, La Fille Mal Gardée, Giselle, Le Corsaire, La Esmeralda, Grand Pas Classique, and numerous Balanchine ballets.</p>
-                                                    <p class="text-lg-left sectionText">In 2018, Thais relocated to the United States with her family, obtaining permanent residence through the EB2-NIW Visa. After a hiatus, she returned to dance in 2020, joining Relevé-tios Dance Company. Thais has performed as a guest artist in various local studio shows and events, including The Steinbrenner Family Foundation Children’s Christmas Concerts with The Florida Orchestra. </p>
-                                                    <p class="text-lg-left sectionText">In addition to her dance career, Thais is a dedicated businesswoman, holding multiple college degrees in Graphic and Industrial Design and Business Administration. She also works as a ballet teacher and coach, continuing to inspire and train the next generation of dancers. </p>
-                                                </div>                                           
-                                        </div>                    
-                                    </section> 
-                                               
-                            </div>
-                             <!-- Festival -->
-                             <div class="festivalPage mainContainer">
-                                <!--Grupo tallet-->
-                                <section class="sectionFestival sectionContainer">
-                                    <div class="containerFestival">
-                                        <div class="title">
-                                            <h2 class="display-3 text-center mb-4 sectionTitle">Talhe Group</h2>
-                                            <hr class="underline">
-                                        </div>
-                                        <div class="fullText">
-                                          
-                                        </div>      
-                                    </div>                    
-                                </section>  
-                                    <!--História do name-->
-                                    <section class="sectionNomeHistoria sectionContainer">
-                                        <div class="containerNomeHistoria">                   
-                                            <div class="opacityNomeHistoria"></div>
-                                            <div class="sectionContent historiaSectionContent">
-                                                <div class="title">
-                                                    <h2 class="display-3 text-center mb-4 sectionTitle">História do Nome</h2>                            
-                                                </div>
-                                                <hr class="underline">
-                                                <div class="fullText">
-                                                    <p class="text-lg-left sectionText"> E é pensando nisso, que nasce o Thalhe Festival. Ele vem para criar um espaço de integração e acolhimento para todos jovens adultos, adultos e seniors que desejam ter a experiência de estarem nos palcos e mostrar sua arte. Podendo ser a primeira experiência, a milésima ou até mesmo dançar um estilo ou alguma determinada variação que sempre sonhou. O que temos certeza enquanto artistas, é que o palco é "a cereja do bolo" para todo esforço da sala de aula. No Thalhe Festival, o bailarino terá a oportunidade de experiências tal qual um bailarino profissional, como aulas de aquecimento, sessões de fisioterapia, coaches para ensaios, sessões fotográficas, etc.</p>
-                                                </div>  
-                                            </div>                        
-                                        </div>                    
-                                    </section>              
-                            </div>         
-                    </main>      
-                
-                
-                
-                    <!-- Página de Login -->
-                    <main class="mainContainer loginPage">
-                        <section class="loginSection sectionContainer">
-                            <div class="opacity"></div>
-                            <div class="loginContent">
-                                <div class="login loginContentBox">
-                                    <h5>Sign in</h5>
-                                    <hr class="underline">
-                                    <form class="loginForm">
-                                        <!-- Campo de email -->
-                                        <div data-mdb-input-init class="form-outline mb-4 loginBox">
-                                            <label class="form-label loginLabel" for="form2Example1">Email address</label>
-                                            <input type="email" id="form2Example1" class="form-control loginInput" />
-                                        </div>
-                                        <!-- Campo de senha -->
-                                        <div data-mdb-input-init class="form-outline mb-4 loginBox">
-                                            <label class="form-label loginLabel" for="form2Example2">Password</label>
-                                            <input type="password" id="form2Example2" class="form-control loginInput" />
-                                        </div>
-                                        <!-- Opções de lembrar senha e link para recuperação -->
-                                        <div class="row mb-4 loginOptions">
-                                            <div class="col d-flex justify-content-center">
-                                                <!-- Checkbox -->
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                                                    <label class="form-check-label loginLabel" for="form2Example31"> Remember me </label>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <!-- Link para recuperação de senha -->
-                                                <a href="#!">Forgot password?</a>
-                                            </div>
-                                        </div>
-                                        <!-- Botões de envio -->
-                                        <button type="button" id="sign-in" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Sign in</button>
-                                        <p>or</p>
-                                        <button type="button" onclick="changeToRegisterPage()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Register</button>
-                                    </form>
+                                            <p class="text-lg-left sectionText">Thais Sarmento began her dance studies in classical ballet at the age of 8 in Rio de Janeiro, Brazil. Under the guidance of Jorge Texeira, she achieved soloist and principal dancer positions with Grupo Thalhe. Throughout her career, Thais has participated in numerous contests across Brazil, consistently earning awards and recognition.</p>
+                                            <p class="text-lg-left sectionText">Thais has performed with renowned dance partners, including Andre Valadon (National Dance Alive Ballet, USA), Welligton Gomes (Rio de Janeiro's Municipal Theater), Reginaldo Oliveira (Salzburger Landestheater, Germany), William Pedro (Bejart), Daniel Deivison (San Francisco Ballet), and Alysson Rocha (Ballett Dortmund). She completed her graduation at Petite Danse, becoming a certified professional teacher.</p>
+                                            <p class="text-lg-left sectionText">As a soloist with Companhia Brasileira de Ballet, Thais performed in various ballets such as Coppelia, Nutcracker, Don Quixote, Paquita, La Fille Mal Gardée, Giselle, Le Corsaire, La Esmeralda, Grand Pas Classique, and numerous Balanchine ballets.</p>
+                                            <p class="text-lg-left sectionText">In 2018, Thais relocated to the United States with her family, obtaining permanent residence through the EB2-NIW Visa. After a hiatus, she returned to dance in 2020, joining Relevé-tios Dance Company. Thais has performed as a guest artist in various local studio shows and events, including The Steinbrenner Family Foundation Children’s Christmas Concerts with The Florida Orchestra. </p>
+                                            <p class="text-lg-left sectionText">In addition to her dance career, Thais is a dedicated businesswoman, holding multiple college degrees in Graphic and Industrial Design and Business Administration. She also works as a ballet teacher and coach, continuing to inspire and train the next generation of dancers. </p>
+                                        </div>                                           
                                 </div>                    
+                            </section> 
+                               <section class="bioImgContainer">
+                                    <div class="bioImg"></div>
+                               </section>
+                               <section class="sectionBio sectionContainer">
+                                <div class="containerBio">
+                                    <div class="title">
+                                        <h2 class="display-3 text-center mb-4 sectionTitle">Rayana Fonte</h2>
+                                        <hr class="underline">
+                                    </div>                                          
+                                        <div class="fullText">
+                                            <p class="text-lg-left sectionText">Thais Sarmento began her dance studies in classical ballet at the age of 8 in Rio de Janeiro, Brazil. Under the guidance of Jorge Texeira, she achieved soloist and principal dancer positions with Grupo Thalhe. Throughout her career, Thais has participated in numerous contests across Brazil, consistently earning awards and recognition.</p>
+                                            <p class="text-lg-left sectionText">Thais has performed with renowned dance partners, including Andre Valadon (National Dance Alive Ballet, USA), Welligton Gomes (Rio de Janeiro's Municipal Theater), Reginaldo Oliveira (Salzburger Landestheater, Germany), William Pedro (Bejart), Daniel Deivison (San Francisco Ballet), and Alysson Rocha (Ballett Dortmund). She completed her graduation at Petite Danse, becoming a certified professional teacher.</p>
+                                            <p class="text-lg-left sectionText">As a soloist with Companhia Brasileira de Ballet, Thais performed in various ballets such as Coppelia, Nutcracker, Don Quixote, Paquita, La Fille Mal Gardée, Giselle, Le Corsaire, La Esmeralda, Grand Pas Classique, and numerous Balanchine ballets.</p>
+                                            <p class="text-lg-left sectionText">In 2018, Thais relocated to the United States with her family, obtaining permanent residence through the EB2-NIW Visa. After a hiatus, she returned to dance in 2020, joining Relevé-tios Dance Company. Thais has performed as a guest artist in various local studio shows and events, including The Steinbrenner Family Foundation Children’s Christmas Concerts with The Florida Orchestra. </p>
+                                            <p class="text-lg-left sectionText">In addition to her dance career, Thais is a dedicated businesswoman, holding multiple college degrees in Graphic and Industrial Design and Business Administration. She also works as a ballet teacher and coach, continuing to inspire and train the next generation of dancers. </p>
+                                        </div>                                           
+                                </div>                    
+                            </section>                                     
+                        </div>         
+                </main>      
+            
+            
+            
+                <!-- Página de Login -->
+                <main class="mainContainer loginPage">
+                    <section class="loginSection sectionContainer">
+                        <div class="opacity"></div>
+                        <div class="loginContent">
+                            <div class="login loginContentBox">
+                                <h5>Sign in</h5>
+                                <hr class="underline">
+                                <form class="loginForm">
+                                    <!-- Campo de email -->
+                                    <div data-mdb-input-init class="form-outline mb-4 loginBox">
+                                        <label class="form-label loginLabel" for="form2Example1">Email address</label>
+                                        <input type="email" id="form2Example1" class="form-control loginInput" />
+                                    </div>
+                                    <!-- Campo de senha -->
+                                    <div data-mdb-input-init class="form-outline mb-4 loginBox">
+                                        <label class="form-label loginLabel" for="form2Example2">Password</label>
+                                        <input type="password" id="form2Example2" class="form-control loginInput" />
+                                    </div>
+                                    <!-- Opções de lembrar senha e link para recuperação -->
+                                    <div class="row mb-4 loginOptions">
+                                        <div class="col d-flex justify-content-center">
+                                            <!-- Checkbox -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                                <label class="form-check-label loginLabel" for="form2Example31"> Remember me </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Link para recuperação de senha -->
+                                            <a href="#!">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <!-- Botões de envio -->
+                                    <button type="button" id="sign-in" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Sign in</button>
+                                    <p>or</p>
+                                    <button type="button" onclick="changeToRegisterPage()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 buttonStyle">Register</button>
+                                </form>
+                            </div>                    
+                        </div>
+                    </section>
+                </main>
+            
+            
+                <!-- Página de Registro -->
+                <main class="mainContainer registerPage">
+                    <section class="registerSection sectionContainer">
+                        <div class="opacity"></div>
+                        <div class="registerContent">
+                            <div class="login registerContentBox">
+                                <h5>Register</h5>
+                                <hr class="underline">
+                                <form id="registerForm">
+                                    <div class="form-group">
+                                        <div class="labelContainer">
+                                            <label for="nome">Full Name:
+                                                <input type="text" class="form-control" id="nome" placeholder="Enter your name" required>
+                                            </label>
+                                            <label for="dataNascimento">Date of Birth:
+                                                <input type="date" class="form-control" id="dataNascimento" required>
+                                            </label>
+                                        </div>                               
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="labelContainer">
+                                            <label for="email">E-mail:
+                                                <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
+                                            </label>                                
+                                            <label for="telefone">Phone:
+                                                <input type="tel" class="form-control" id="telefone" placeholder="Enter your phone" required>
+                                            </label>
+                                        </div>                               
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="labelContainer">
+                                            <label for="senha">Password:
+                                                <input type="password" class="form-control" id="senha" placeholder="Enter your password" required>
+                                            </label>
+                                            <label for="confirmarSenha">Confirm Password:
+                                                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirm your password" required>
+                                            </label>
+                                        </div>                               
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="labelContainer">
+                                            <label for="cidade">City:
+                                                <input type="text" class="form-control" id="cidade" placeholder="Enter your city" required>
+                                            </label>
+                                            <label for="danceStudio">Dance Studio:
+                                                <input type="text" class="form-control" id="danceStudio" placeholder="Enter your name of studio de dance" required>
+                                            </label>    
+                                        </div>                               
+                                    </div>                            
+                                    <button type="submit" class="btn btn-primary buttonStyle registerButton">Sign up</button>
+                                </form>
+                                
                             </div>
-                        </section>
-                    </main>
-                
-                
-                    <!-- Página de Registro -->
-                    <main class="mainContainer registerPage">
-                        <section class="registerSection sectionContainer">
-                            <div class="opacity"></div>
-                            <div class="registerContent">
-                                <div class="login registerContentBox">
-                                    <h5>Register</h5>
-                                    <hr class="underline">
-                                    <form id="registerForm">
-                                        <div class="form-group">
-                                            <div class="labelContainer">
-                                                <label for="nome">Full Name:
-                                                    <input type="text" class="form-control" id="nome" placeholder="Enter your name" required>
-                                                </label>
-                                                <label for="dataNascimento">Date of Birth:
-                                                    <input type="date" class="form-control" id="dataNascimento" required>
-                                                </label>
-                                            </div>                               
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="labelContainer">
-                                                <label for="email">E-mail:
-                                                    <input type="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
-                                                </label>                                
-                                                <label for="telefone">Phone:
-                                                    <input type="tel" class="form-control" id="telefone" placeholder="Enter your phone" required>
-                                                </label>
-                                            </div>                               
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="labelContainer">
-                                                <label for="senha">Password:
-                                                    <input type="password" class="form-control" id="senha" placeholder="Enter your password" required>
-                                                </label>
-                                                <label for="confirmarSenha">Confirm Password:
-                                                    <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirm your password" required>
-                                                </label>
-                                            </div>                               
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="labelContainer">
-                                                <label for="cidade">City:
-                                                    <input type="text" class="form-control" id="cidade" placeholder="Enter your city" required>
-                                                </label>
-                                                <label for="danceStudio">Dance Studio:
-                                                    <input type="text" class="form-control" id="danceStudio" placeholder="Enter your name of studio de dance" required>
-                                                </label>    
-                                            </div>                               
-                                        </div>                            
-                                        <button type="submit" class="btn btn-primary buttonStyle registerButton">Sign up</button>
-                                    </form>
-                                    
-                                </div>
-                            </div>
-                        </section>
-                    </main>
-                
-        </div>
-     
-    <!-- Scripts -->
-    <script src=".Assets/scripts/bootstrap.min.js"></script>
-    <script src="./Assets/scripts/script.js"></script>
+                        </div>
+                    </section>
+                </main>
+            
+    </div>
+ 
+<!-- Scripts -->
+<script src=".Assets/scripts/bootstrap.min.js"></script>
+<script src="./Assets/scripts/script.js"></script>
 </body>
 </html>

@@ -1,28 +1,28 @@
 let homeButton = document.querySelector('#homeNavButton');
 let historiaButton = document.querySelector('#historyNavButton');
-let festivalButton = document.querySelector('#festivalNavButton');
+let biographyButton = document.querySelector('#biographyNavButton');
 let headerButtons = document.querySelectorAll('nav-link');
-const festivalPage = document.querySelector('.festivalPage');
+const biographyPage = document.querySelector('.biographyPage');
 const homePage = document.querySelector('.homePage');
 const historiaPage = document.querySelector('.historiaPage');
 const loginPage = document.querySelector('.loginPage');
 const registerPage = document.querySelector('.registerPage');
 const homeNavButton = document.querySelector('#homeButton');
 const body = document.querySelector('body');
+const menuContainer = document.querySelector('.mobileMenuContainer');
 
 function changeToLoginPage(){
     document.querySelector('.global').style.display = 'block';
     document.querySelector('.mainSlider').style.display = 'none';
-    document.querySelector('.mobileMenu').style.display = 'none';
+   
     console.log('vasco da gama')
     registerPage.style.display = 'none';
     loginPage.style.display = 'grid';
 
-    document.querySelector('.menuIcon').classList.remove('open');
     historiaButton.classList.remove('active')
-    festivalButton.classList.remove('active')
+    biographyButton.classList.remove('active')
     homeButton.classList.remove('active')     
-
+    closeMenu()
     homeButton.addEventListener('click',()=>{        
         reloadHomePage();
     })    
@@ -31,18 +31,17 @@ function changeToLoginPage(){
 function changeToRegisterPage(){
     document.querySelector('.global').style.display = 'block';
     document.querySelector('.mainSlider').style.display = 'none';
-    document.querySelector('.mobileMenu').style.display = 'none';
+
     loginPage.style.display = 'none';
-    registerPage.style.display = 'grid';
-    
-    document.querySelector('.menuIcon').classList.remove('open');
+    registerPage.style.display = 'grid';    
     historiaButton.classList.remove('active');
-    festivalButton.classList.remove('active');
+    biographyButton.classList.remove('active');
     homeButton.classList.remove('active') ;
 
     homeButton.addEventListener('click',()=>{       
         reloadHomePage();
     })    
+    closeMenu()
 }
      homeButton.addEventListener('click',()=>{            
             reloadHomePage();
@@ -52,86 +51,71 @@ function changeToRegisterPage(){
         reloadHistoriaPage();
 
     })
-    festivalButton.addEventListener('click', ()=>{
-        reloadFestivalPage();
+    biographyButton.addEventListener('click', ()=>{
+        reloadbiographyPage();
     })
 
 
 function reloadHomePage(){
-    festivalPage.style.display ='none';
+    biographyPage.style.display ='none';
     historiaPage.style.display ='none';
-    document.querySelector('.menuIcon').classList.remove('open');
     document.querySelector('.global').style.display = 'block';
-    document.querySelector('.mobileMenu').style.display = 'none';
+    
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.add('active');    
     historiaButton.classList.remove('active');
-    festivalButton.classList.remove('active');
+    biographyButton.classList.remove('active');
     
     document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
-    festivalPage.style.display ='none';
+    biographyPage.style.display ='none';
     historiaPage.style.display ='none';
+    closeMenu()
 }
 function reloadHistoriaPage(){
-    festivalPage.style.display ='none';
+    biographyPage.style.display ='none';
     historiaPage.style.display ='block';
-    document.querySelector('.menuIcon').classList.remove('open');
     document.querySelector('.global').style.display = 'block';
-    document.querySelector('.mobileMenu').style.display = 'none';
+    
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.remove('active');    
     historiaButton.classList.add('active');
-    festivalButton.classList.remove('active');    
+    biographyButton.classList.remove('active');    
     document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
+    closeMenu()
 }
-function reloadFestivalPage(){    
+function reloadbiographyPage(){    
     historiaPage.style.display ='block';
-    festivalPage.style.display ='block';
-    document.querySelector('.menuIcon').classList.remove('open');
+    biographyPage.style.display ='block';
     document.querySelector('.global').style.display = 'block';
-    document.querySelector('.mobileMenu').style.display = 'none';
+   
     loginPage.style.display = 'none';
     registerPage.style.display = 'none';
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.remove('active');    
     historiaButton.classList.remove('active');
-    festivalButton.classList.add('active');
+    biographyButton.classList.add('active');
     document.querySelector('.mainSlider').style.transform = "translateX(-200vw)";
+    closeMenu()
 }
 
 function updateMobileMenu() {
-    let slider = document.querySelector('.global');
-    let mobileMenu = document.querySelector('.mobileMenu');
-    let menuIcon = document.querySelector('.menuIcon');
     
-    var computedStyle = window.getComputedStyle(mobileMenu);
-    var currentDisplay = computedStyle.display;
-    
-    if (currentDisplay === 'none' || !mobileMenu.classList.contains('visible')) {
-        // Exibir o menu móvel com animação
-        slider.style.display = 'none';
-        mobileMenu.style.display = 'flex';
-        // Forçar reflow para garantir que a transição seja aplicada
-        void mobileMenu.offsetWidth;
-        mobileMenu.classList.add('visible');
-        // Adicionar a classe open ao ícone do menu
-        menuIcon.classList.add('open');
-    } else {
-        // Ocultar o menu móvel com animação
-        mobileMenu.classList.remove('visible');
-        mobileMenu.addEventListener('transitionend', function() {
-            mobileMenu.style.display = 'none';
-            slider.style.display = 'block';
-        }, { once: true });
-        // Remover a classe open do ícone do menu
-        menuIcon.classList.remove('open');
+    const menuWidth = window.getComputedStyle(menuContainer).getPropertyValue('width');
+    console.log(menuWidth);
+    if(menuWidth == '0px'){
+        menuContainer.classList.add('active');
+    }else{
+       closeMenu();
     }
 }
-
+function closeMenu(){
+    menuContainer.classList.remove('active');
+    console.log("teste")
+}
 
 
 
@@ -187,11 +171,16 @@ document.addEventListener('DOMContentLoaded', () => {
         signInButton.addEventListener('click', async (e) => {
             e.preventDefault();
             console.log("Botão Sign In clicado");
-            
-            const email = document.getElementById('form2Example1').value;
-            const password = document.getElementById('form2Example2').value;
+
+            const email = document.getElementById('form2Example1')?.value;
+            const password = document.getElementById('form2Example2')?.value;
 
             console.log(`Email: ${email}, Password: ${password}`);
+
+            if (!email || !password) {
+                alert('Please enter both email and password');
+                return;
+            }
 
             try {
                 console.log('Enviando requisição para login...');
@@ -200,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password })
                 });
+
                 console.log('Resposta recebida:', response);
 
                 const data = await response.json();
@@ -212,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     updateLogin();
                     reloadHomePage();
                 } else {
-                    alert('Login failed: ' + data.msg);
+                    alert('Login failed: ' + (data.msg || 'Unknown error'));
                 }
             } catch (err) {
                 console.error('Error:', err);
@@ -222,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log("Botão Sign In não encontrado");
     }
+});
 
     const protectedRouteButton = document.querySelector('#protected-route-button');
     if (protectedRouteButton) {
@@ -264,38 +255,73 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log("Botão Protected Route não encontrado");
     }
-});
 
 const headerButton = document.querySelector('#headerButtons')
 
 function updateLogin() {
-    const headerButton = document.getElementById('headerButtons');
-    if (headerButton) {
-        headerButton.style.setProperty('display', 'none', 'important');
-        const loggedMenu = document.querySelector('.menuLoggedContainer');
-        const signOutMenu = document.querySelector('.menuLogged');
-        const closeMenu = document.querySelector('.closeMenu');
+    const loggedMenu = document.querySelector('.menuLoggedContainer');
+    const signOutMenu = document.querySelector('.menuLogged');
+    const closeMenu = document.querySelector('.closeMenu');
 
-        loggedMenu.style.display = 'flex'; 
-        signOutMenu.style.display = 'none';
-
-        // Recuperar o nome do usuário do localStorage
-        const userName = localStorage.getItem('userName');
-        if (userName) {
-            document.querySelector('.userName').innerHTML = userName; 
-        }  
-
-        loggedMenu.addEventListener('click', ()=>{
-            signOutMenu.style.display = 'flex';
-        });
-        closeMenu.addEventListener('click', ()=>{
-            signOutMenu.style.display = 'none';
-        });
-        
-        loginPage.style.display = 'none';
-        homePage.style.display = 'grid';
-        homeButton.classList.remove('active');
+    if (loggedMenu) {
+        loggedMenu.style.display = 'flex';
     } else {
-        console.error('Elemento "headerButtons" não encontrado');
-    } 
-}
+        console.log("loggedMenu não encontrado");
+    }
+
+    if (signOutMenu) {
+        signOutMenu.style.display = 'none';
+    } else {
+        console.log("signOutMenu não encontrado");
+    }
+
+    // Recuperar o nome do usuário do localStorage
+    const userName = localStorage.getItem('userName');
+    console.log(userName);
+
+    if (userName) {
+        const userNameElement = document.querySelector('.userName');
+        if (userNameElement) {
+            userNameElement.innerHTML = userName;
+        } else {
+            console.log("userNameElement não encontrado");
+        }
+    } else {
+        console.error('User name is not available in localStorage');
+    }
+
+    if (loggedMenu) {
+        loggedMenu.addEventListener('click', () => {
+            if (signOutMenu) {
+                signOutMenu.style.display = 'flex';
+            } else {
+                console.log("signOutMenu não encontrado ao clicar no loggedMenu");
+            }
+        });
+    }
+
+    if (closeMenu) {
+        closeMenu.addEventListener('click', () => {
+            if (signOutMenu) {
+                signOutMenu.style.display = 'none';
+            } else {
+                console.log("signOutMenu não encontrado ao clicar no closeMenu");
+            }
+        });
+    }
+
+    const loginPage = document.querySelector('.loginPage'); // Adicionado
+    const homePage = document.querySelector('.homePage'); // Adicionado
+    const homeButton = document.querySelector('.homeButton'); // Adicionado
+
+    if (loginPage) {
+        loginPage.style.display = 'none';
+    } else {
+        console.log("loginPage não encontrado");
+    }
+
+    if (homePage) {
+        homePage.style.display = 'grid';
+    } else {
+        console.log("homePage não encontrado");
+    }};
