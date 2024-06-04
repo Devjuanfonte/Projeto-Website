@@ -1,10 +1,12 @@
 let homeButton = document.querySelector('#homeNavButton');
 let historiaButton = document.querySelector('#historyNavButton');
 let biographyButton = document.querySelector('#biographyNavButton');
+let festivalButton = document.querySelector('#festivalNavButton');
 let headerButtons = document.querySelectorAll('nav-link');
 const biographyPage = document.querySelector('.biographyPage');
 const homePage = document.querySelector('.homePage');
 const historiaPage = document.querySelector('.historiaPage');
+const festivalPage = document.querySelector('.festivalPage');
 const loginPage = document.querySelector('.loginPage');
 const registerPage = document.querySelector('.registerPage');
 const homeNavButton = document.querySelector('#homeButton');
@@ -21,6 +23,7 @@ function changeToLoginPage(){
 
     historiaButton.classList.remove('active')
     biographyButton.classList.remove('active')
+    festivalButton.classList.remove('active');
     homeButton.classList.remove('active')     
     closeMenu()
     homeButton.addEventListener('click',()=>{        
@@ -36,6 +39,7 @@ function changeToRegisterPage(){
     registerPage.style.display = 'grid';    
     historiaButton.classList.remove('active');
     biographyButton.classList.remove('active');
+    festivalButton.classList.remove('active');
     homeButton.classList.remove('active') ;
 
     homeButton.addEventListener('click',()=>{       
@@ -54,11 +58,16 @@ function changeToRegisterPage(){
     biographyButton.addEventListener('click', ()=>{
         reloadbiographyPage();
     })
+    festivalButton.addEventListener('click',()=>{
+        console.log('vasco')
+        reloadFestivalPage();
+    })
 
 
 function reloadHomePage(){
     biographyPage.style.display ='none';
     historiaPage.style.display ='none';
+    festivalPage.style.display = 'none';
     document.querySelector('.global').style.display = 'block';
     
     loginPage.style.display = 'none';
@@ -67,14 +76,16 @@ function reloadHomePage(){
     homeButton.classList.add('active');    
     historiaButton.classList.remove('active');
     biographyButton.classList.remove('active');
-    
+    festivalButton.classList.remove('active');    
     document.querySelector('.mainSlider').style.transform = "translateX(0vw)";
     biographyPage.style.display ='none';
     historiaPage.style.display ='none';
+    festivalPage.style.display = 'none';
     closeMenu()
 }
 function reloadHistoriaPage(){
     biographyPage.style.display ='none';
+    festivalPage.style.display = 'none';
     historiaPage.style.display ='block';
     document.querySelector('.global').style.display = 'block';
     
@@ -83,6 +94,7 @@ function reloadHistoriaPage(){
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.remove('active');    
     historiaButton.classList.add('active');
+    festivalButton.classList.remove('active');
     biographyButton.classList.remove('active');    
     document.querySelector('.mainSlider').style.transform = "translateX(-100vw)";
     closeMenu()
@@ -90,6 +102,7 @@ function reloadHistoriaPage(){
 function reloadbiographyPage(){    
     historiaPage.style.display ='block';
     biographyPage.style.display ='block';
+    festivalPage.style.display = 'none';
     document.querySelector('.global').style.display = 'block';
    
     loginPage.style.display = 'none';
@@ -97,10 +110,29 @@ function reloadbiographyPage(){
     document.querySelector('.mainSlider').style.display = 'flex';
     homeButton.classList.remove('active');    
     historiaButton.classList.remove('active');
+    festivalButton.classList.remove('active');
     biographyButton.classList.add('active');
     document.querySelector('.mainSlider').style.transform = "translateX(-200vw)";
     closeMenu()
 }
+function reloadFestivalPage(){
+    historiaPage.style.display ='block';
+    biographyPage.style.display ='block';
+    festivalPage.style.display = 'block';
+    document.querySelector('.global').style.display = 'block';
+   
+    loginPage.style.display = 'none';
+    registerPage.style.display = 'none';
+    document.querySelector('.mainSlider').style.display = 'flex';
+    homeButton.classList.remove('active');    
+    historiaButton.classList.remove('active');
+    biographyButton.classList.remove('active');
+    festivalButton.classList.add('active');
+    document.querySelector('.mainSlider').style.transform = "translateX(-300vw)";
+    closeMenu()
+}
+
+
 
 function updateMobileMenu() {
     
